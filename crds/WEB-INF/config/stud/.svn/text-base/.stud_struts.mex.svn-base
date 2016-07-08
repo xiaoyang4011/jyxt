@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/studentPage.do" location="0,302" dimension="236,104" />
+  <StrutsActivity path="/studentInfo.do" location="281,302" dimension="236,104" />
+  <StrutsActivity path="/queryTest.do" location="0,0" dimension="351,104" />
+  <StrutsActivity path="/queryTest2.do" location="396,0" dimension="351,104" />
+  <StrutsActivity path="/stud/studentpage.jsp" location="38,506" dimension="160,53" />
+  <StrutsActivity path="/stud/studenginfo.jsp" location="321,506" dimension="156,53" />
+  <StrutsActivity path="/financial/trendAnaly/0304querytest21.jsp" location="39,204" dimension="272,53" />
+  <StrutsActivity path="/financial/trendAnaly/0304querytest2.jsp" location="439,204" dimension="265,53" />
+  <StrutsActivity path="/stud/studentinfo.jsp" />
+  <StrutsTransition id="/studentInfo.do,succ,/stud/studenginfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="399,406" />
+      <AbsolutePoint location="399,506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryTest2.do,succ,/financial/trendAnaly/0304querytest2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="571,104" />
+      <AbsolutePoint location="571,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryTest.do,succ,/financial/trendAnaly/0304querytest21.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="175,104" />
+      <AbsolutePoint location="175,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentPage.do,succ,/stud/studentpage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="118,406" />
+      <AbsolutePoint location="118,506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentInfo.do,succ,/stud/studentinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="399,354" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

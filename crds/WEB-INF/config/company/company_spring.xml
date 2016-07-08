@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	
+	<bean id="DAOcy" class="crds.company.dao.impl.DAOcy" singleton="false"></bean>
+    <bean id="BOcy" class="crds.company.bo.impl.BOcy" singleton="false"></bean>
+
+</beans>

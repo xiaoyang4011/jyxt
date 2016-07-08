@@ -1,0 +1,107 @@
+package crds.basis.department.web;
+
+import java.awt.image.BufferedImage;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.springframework.web.struts.MappingDispatchActionSupport;
+
+import crds.basis.department.bo.IBOdepart;
+
+
+
+public final class ActionDepart extends MappingDispatchActionSupport{
+	private Map<String, BufferedImage> map = null;
+	private LinkedHashMap<String, LinkedHashMap<String, String>> map_data=null;
+
+
+	public IBOdepart getBO() {
+		return (IBOdepart) this.getWebApplicationContext().getBean(
+		"BOdepart");
+	}
+	//初始化
+	public ActionForward Department_Main(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		List list=getBO().DepartmentInfo();
+		request.setAttribute("student", list);
+		return mapping.findForward("succ");
+	}
+	public ActionForward addJump(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {	
+		return mapping.findForward("succ");
+	}
+	public ActionForward updateJump(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {	
+		FormDepart form1=(FormDepart)form;
+		List list = getBO().updateJump(form1);
+		request.setAttribute("list", list);
+		return mapping.findForward("succ");
+	}
+	//添加机构
+	public ActionForward adddepart(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {		
+		FormDepart form1=(FormDepart)form;
+		ActionForward forward = null;
+		if(!this.isTokenValid(request))
+		{
+			IBOdepart bo=getBO();
+            try{
+            	if(bo.checkExists(form1))
+            	{
+            	
+					forward = mapping.findForward("unsucc");
+            	}
+            	else
+            	{
+            		boolean addStudent=getBO().addDepart(form1);
+
+            		return mapping.findForward("succ");
+            	}
+            }catch(RuntimeException e){
+            	e.printStackTrace();
+            
+				forward = mapping.findForward("ansucc");
+            }
+		
+		}
+		else
+		{
+			request.setAttribute("message","请不要重复提交");
+			forward = mapping.findForward("ansucc");
+		}
+		return forward;
+	}
+	public ActionForward updatedepart(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {	
+		FormDepart form1=(FormDepart)form;
+		boolean bo = getBO().updatedepart(form1);
+		//判断bo确定跳转页面
+		if(bo==true)
+		{
+			request.setAttribute("message","修改成功！");	
+			return mapping.findForward("succ");
+		}
+		else
+		{
+			request.setAttribute("message","修改失败！");	
+			return mapping.findForward("fail");
+		}
+	}
+	public ActionForward delete(ActionMapping mapping, ActionForm form,HttpServletRequest request, HttpServletResponse response)throws Exception{
+		FormDepart form1=(FormDepart)form;
+		boolean bo = getBO().delete(form1);
+		if(bo==false)
+		{
+			return mapping.findForward("fail");
+			
+		}
+		else{
+			return mapping.findForward("succ");
+		}
+	}
+	public ActionForward spec_jump(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {	
+		return mapping.findForward("succ");
+	}
+}

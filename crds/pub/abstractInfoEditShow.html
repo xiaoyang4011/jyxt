@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="this is my page">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script language="Javascript" src="js/crds_common.js"></script>
+	<script language="Javascript" src="js/jquery-1.3.2.min.js"></script>
+</head>
+<style>
+.btn2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #31335d;/*852107*/  
+	background-image:url(../../pub/images/btnbg.gif);
+	padding-top: 2px;
+	padding-bottom: 0px;
+	FILTER: glow(color=#ffffff,strength=3) dropshadow(color=#ffffff,offx=1, offy=1, positive=1); 
+	border: 1px solid #86959e;
+	height:19px;
+	width:85px;
+}
+</style>
+<body style="overflow: hidden;" comment="crds系统摘要信息显示公用模块">
+<table width="100%" height="100%">
+	<tr>
+		<td><textarea id="crdsAbstractInfoEditShowID" name="register_address" mxSize="150" showid="crdsAbstractInfoEditShowNum" style="width:100%;height:100%;"></textarea></td>
+	</tr>
+	<tr >
+		<td align="right" style="height:22">
+		<span style="float:left;" id="crdsAbstractInfoEditShowNumId">还可填<span id="crdsAbstractInfoEditShowNum"></span>个字符</span><span style="float:right;" ><input type="button" id="saveButtonId" class="btn2" value="确定" name="btnOK" onClick="saveEditInfo(1)"/>&nbsp;&nbsp;<input type="button" class="btn2" id="btnCancleId" name="btnCancle" value="关闭" onclick="saveEditInfo(0);"/></span>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
+<script>
+/**
+ * 传过来的数据对象{abstrinfo:"",isEdit:true,title:"",mxSize:150}
+ * abstrinfo 可编辑或要查看的摘要信息
+ * isEdit 是否可对摘要信息进行编辑
+ * title 弹出编辑框时的标题
+ * mxSize 编辑时最多可输入多少个字符
+ */
+var dataObj = window.dialogArguments;
+//保存编辑后的摘要信息
+function saveEditInfo(flag){
+	window.returnValue = flag==1?jQuery("#crdsAbstractInfoEditShowID").val():dataObj.abstrinfo;
+	window.close();
+}
+//标题显示
+if(dataObj.title && dataObj.title.length>0){
+	document.title = dataObj.title + document.title;
+}
+//页面装载完后的初始化操作
+jQuery(function() {
+	var disabled = dataObj.isEdit!=true, textArea = jQuery("#crdsAbstractInfoEditShowID");
+	textArea.val(dataObj.abstrinfo).attr("readonly",disabled);//摘要信息可操作控制
+	jQuery("#saveButtonId").attr("disabled", disabled);//保存按钮可操作控制
+	//可输入的字符控制
+	if(dataObj.mxSize && dataObj.mxSize > 0){
+		textArea.attr("mxSize",dataObj.mxSize);
+		inputCharacterControl("crdsAbstractInfoEditShowID");
+	} else {
+		jQuery("#crdsAbstractInfoEditShowNumId").hide();
+	}
+	jQuery("#btnCancleId").focus();
+});
+</script>

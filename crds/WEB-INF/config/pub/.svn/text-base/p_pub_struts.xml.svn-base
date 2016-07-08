@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<!-- =========Form Bean Definitions============== -->
+	<form-beans>
+		
+	</form-beans>
+	
+	<!-- =========Global Exceptions Definitions============== -->
+	<global-exceptions>
+		<exception handler="crds.pub.util.CustomExceptionHandler"
+			key="exception" type="java.lang.Exception"
+			path="/pub/main/0000failure.jsp" />
+	</global-exceptions>
+
+	<!-- ========== Global Forward Definitions ========= -->
+	<global-forwards>
+		<forward name="failure" path="/pub/main/0000failure.jsp" />
+	</global-forwards>
+	
+	<!-- ========== Action Mappings Definitions ========= -->
+	<action-mappings>
+		
+	</action-mappings>
+	
+	<!-- ========== Message Resources Definitions ========= -->
+	<message-resources parameter="resources" />
+
+<!--	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">-->
+<!--		<set-property property="pathnames"-->
+<!--			value="/WEB-INF/config/pub/p_pub_validator_rules.xml,-->
+<!--			/WEB-INF/config/pub/p_pub_validation.xml" />-->
+<!--	</plug-in>-->
+
+</struts-config>

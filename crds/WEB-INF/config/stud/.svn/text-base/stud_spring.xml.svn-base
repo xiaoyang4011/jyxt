@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	
+	<bean id="DAOStud" class="crds.stud.dao.impl.DAOStud" singleton="false"></bean>
+    <bean id="BOStud" class="crds.stud.bo.impl.BOStud" singleton="false"></bean>
+
+	<bean id="DAOMyUpload" class="crds.personalSpace.myUpload.dao.impl.DAOMyUpload" singleton="false"></bean>
+	<bean id="BOMyUpload" class="crds.personalSpace.myUpload.bo.impl.BOMyUpload" singleton="false"></bean>
+	
+	<bean id="DAOMyDownload" class="crds.personalSpace.myDownload.dao.impl.DAOMyDownload" singleton="false"></bean>
+	<bean id="BOMyDownload" class="crds.personalSpace.myDownload.bo.impl.BOMyDownload" singleton="false"></bean>
+	
+	<bean id="DAOMyBrowse" class="crds.personalSpace.myBrowse.dao.impl.DAOMyBrowse" singleton="false"></bean>
+	<bean id="BOMyBrowse" class="crds.personalSpace.myBrowse.bo.impl.BOMyBrowse" singleton="false"></bean>
+	
+	<bean id="DAOMyModify" class="crds.personalSpace.myModify.dao.impl.DAOMyModify" singleton="false"></bean>
+	<bean id="BOMyModify" class="crds.personalSpace.myModify.bo.impl.BOMyModify" singleton="false"></bean>
+</beans>

@@ -1,0 +1,39 @@
+/**
+ * product name :CRDS
+ */
+package crds.stud.bo;
+
+import java.util.List;
+
+import crds.stud.web.form.FormStud;
+
+
+/**
+ * 
+
+ * @version : 1.0
+ * @author : maogf
+ * @date : May 5, 2009 3:15:44 PM
+ * @email : maogenfeng@gmail.com
+ */
+public interface IBOStud {
+
+	
+	
+	public List queryTest( ) throws Exception ;
+
+	/**  ��ȡѧ����Ϣ*/
+	@SuppressWarnings("unchecked")
+	public List studentInfo(FormStud formstud ) throws Exception;
+	public List subInfo( ) throws Exception;
+	public boolean addInfo(FormStud addform) throws Exception;
+	public boolean delInfo(int id) throws Exception;
+	public boolean alterInfo(FormStud alterform) throws Exception;
+	public List getAlterList(int id) throws Exception;
+	public List student_query(FormStud formstud) throws Exception;
+	public List student_query1(FormStud formstud) throws Exception;
+	public List getresList() throws Exception;
+	public List getspecList() throws Exception;
+	//public List getAlterList(int id, int bol) throws Exception;
+
+	public boolean checkUserExists(FormStud formstud) throws Exception; }

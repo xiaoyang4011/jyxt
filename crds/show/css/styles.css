@@ -1,0 +1,25 @@
+/*
+vitamin demo styles
+*/
+body {
+	
+	margin:0 0;
+	padding:0 0;
+	background:#222;
+	color:#fff;
+	font-family:georgia,times,serif;
+}
+
+#doc {
+	border-top:5px solid #000;
+	height: 100%;
+	width: auto;
+}
+h1 {
+	font-weight:normal;
+	font-size:1.8em;
+	text-shadow:3px 3px #000;
+}
+a {
+	color:#fff;
+}

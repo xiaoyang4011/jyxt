@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC
+          "-//SPRING//DTD BEAN//EN"
+          "spring-beans.dtd">
+<beans default-autowire="byName">
+	<!--系统初始化用户和系统应用类型-->
+	<bean id="initCrds" class="crds.pub.util.InitCrds">
+		<property name="username" value="sys"/>
+		<property name="password" value="Dl2tYqPx7jMKPLNy4M70TQ=="/>
+		<property name="menuid" value="01,0101,07,0701"/>
+		<property name="systype" value="F"/><!--系统应用类型 F基金公司、B银行-->
+		<property name="analyst_rights" value="C"/><!--分析师操作权限 C：上报提交 S：可自己完成-->
+		<property name="assgin_mothod" value="W"/><!--抵押担保分配方式W：完全分配 S：共享分配-->
+	</bean>
+	<!--web服务器负载均衡配置-->
+	<bean id="serverList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+		    <!--value>218.57.146.200</value>
+		    <value>218.57.146.200</value>
+		    <value>218.57.146.200</value-->
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="webServer" class="crds.pub.util.InitCrds">
+		<property name="serverList">
+   			<ref local="serverList" />
+  		</property>
+	</bean>
+	<!--首选数据源-->
+	<bean id="dataSource1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!--数据库驱动-->
+		<property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver" />
+		<!--数据库连接地址、用户名、密码-->
+		<property name="url" value="jdbc:jtds:sqlserver://localhost:1433;characterEncoding=utf-8;DataBaseName=trl" />
+		<property name="username" value="sa" />
+		<property name="password" value="912322" />
+		
+	</bean>
+	<!--数据源2,继承于首选数据源-->
+	<bean id="dataSource2" parent="dataSource1" >
+		<property name="url" value="jdbc:jtds:sqlserver://192.168.1.66:1433;DataBaseName=xfcrds" />
+		<property name="username" value="xfcrds" />
+		<property name="password" value="xfcrds" />
+	</bean>
+	<!--数据源3,继承于首选数据源-->
+	<bean id="dataSource3" parent="dataSource1">
+		<property name="url" value="jdbc:jtds:sqlserver://192.168.1.66:1433;DataBaseName=xfcrds" />
+		<property name="username" value="xfcrds" />
+		<property name="password" value="xfcrds" />
+	</bean>
+	<!--数据源控制器，选取可用的数据源-->
+	<bean id="dataSource" class="crds.pub.util.DataSources">
+		<property name="targetDataSources">
+			<map>
+				<entry key="ds1" value-ref="dataSource1" />
+				<entry key="ds2" value-ref="dataSource2" />
+				<entry key="ds3" value-ref="dataSource3" />
+			</map>
+		</property>
+		<property name="defaultTargetDataSource" ref="dataSource1" />
+	</bean>
+
+	<!--数据库操作对象，添加了分页扩展-->
+	<bean id="jdbcTemplate" class="crds.pub.util.JdbcTemplateExtend">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" />
+
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor" lazy-init="true">
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*TX">PROPAGATION_REQUIRED,-Exception</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionProxy" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<value>BO*</value>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>transactionInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor" />
+
+	<bean id="transactionAttributeSource" class="org.springframework.transaction.interceptor.MatchAlwaysTransactionAttributeSource">
+		<property name="transactionAttribute" value="PROPAGATION_REQUIRED,-Exception" />
+	</bean>
+
+	<bean id="SpringBeanServerUtils" class="crds.pub.util.SpringBeanServerUtils"/>
+	<bean id="matchAllTxInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor" />
+	<bean id="EmailJDBC" class="crds.pub.mail.EmailJDBC" singleton="false" />
+	<!-- 产生编号 -->
+	<bean id="businessID" class="crds.pub.util.BusinessID" singleton="false" />
+	<!-- 公共DWR AJAX -->
+	<bean id="actionDWR" class="crds.pub.util.ActionDWR" singleton="false" />
+	
+	<!-- 公共调用方法 -->
+	<bean id="commonMethod" class="crds.pub.util.CommonMethod" />
+	<bean id="CacheUtils" class="crds.pub.util.cache.CacheUtils" />
+	<!--系统操作日志-->
+	<bean id="DAOoperationlog" class="crds.pub.operationLog.dao.impl.DAOoperationlog" singleton="false" />
+	<bean id="BOoperationlog" class="crds.pub.operationLog.bo.impl.BOoperationlog" singleton="false" />
+	
+	
+	
+
+</beans>

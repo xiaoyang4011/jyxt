@@ -1,0 +1,354 @@
+/*列表标题样式，字体颜色、背景颜色*/
+.title{
+/*filter:progid:DXImageTransform.Microsoft.MotionBlur(Strength=30,Direction=90)
+FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#4F94CD,endColorStr=#F0FFFF);*/
+ color: #FFFFFF;/*#330000;*/
+ background-color: #b8161c;/*#77C2E9;*/
+ font-weight:bold;
+}
+/** 网站链接总的css定义:可定义内容为链接字体颜色、样式等 */
+a{text-decoration: underline;} /* 链接无下划线,有为underline */ 
+a:link {color: #333333;} /* 未访问的链接 */
+a:visited {color: #333333;} /* 已访问的链接 */
+a:hover{color: #ff6600;} /* 鼠标在链接上 */ 
+a:active {color: #333333;} /* 点击激活链接 */
+/* 顶部频道文字链接的css定义(用于页面排序)－－将顶部频道文字链接与网站链接总的css定义分开，以后可以制作深底浅字的格式，如果要保持原来的设计样式，将此定义内容删除或定义成与网站链接总的css相同即可。调用代码为<a class='channel' ***>***</a> */
+a.channel:link {color: #ffffff;}
+a.channel:visited {color: #ffffff;}
+a.channel:hover{color: #ff6600;}
+a.channel:active {color: #333333;}
+/* 底部版权信息文字链接的css定义－－与顶部频道文字链接定义的想法相同。可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。调用代码为<a class='bottom' ***>***</a> */
+a.bottom:link {color: #333333;}
+a.bottom:visited {color: #333333;}
+a.bottom:hover{color: #ff6600;}
+a.bottom:active {color: #333333;}
+/* 文章栏目标题文字链接的css定义－－可设置与顶部频道文字链接定义不同的文字颜色，网页内定义以预留。要相同可不设置。调用代码为<a class='class' ***>***</a> */
+a.class:link {color: #333333;}
+a.class:visited {color: #333333;}
+a.class:hover{color: #ff6600;}
+a.class:active {color: #333333;}
+
+/* body的css定义:对应css中“body”，可定义内容为网页字体颜色、背景、浏览器边框等 */
+body {
+	SCROLLBAR-FACE-COLOR: #bac2cd; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #eeeeee; 
+	SCROLLBAR-SHADOW-COLOR: #efefef; 
+	SCROLLBAR-3DLIGHT-COLOR: #2d5996; 
+	SCROLLBAR-ARROW-COLOR: #ffffff; 
+	SCROLLBAR-TRACK-COLOR: #efefef; 
+	SCROLLBAR-DARKSHADOW-COLOR: #2d5996;
+	/*background: #f4f5f6 url(../images/mainbg.gif) repeat-x left top;*/
+	background:#ECE9D8;
+	background-attachment: fixed;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	overflow:auto;
+}
+/* 单元格的css定义:对应css中的“td”"th"，这里为总的表格定义，为一般表格的的单元格风格设置，可定义内容为背景、字体颜色、样式等 */
+body, table, td, p, font{font-size:12px;}
+td
+{
+	font-family:宋体;line-height:150%;
+	font-size: 9pt;
+}
+th {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+/* 文本框的css定义:对应css中的“input”，这里为文本框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+/*input
+{
+background-color: #ffffff; 
+border-bottom: #666666 1px solid;
+border-left: #666666 1px solid;
+border-right: #666666 1px solid;
+border-top: #666666 1px solid;
+color: #666666;
+height: 20px;
+border-color: #666666 #666666 #666666 #666666;
+font-size: 9pt;
+color:black;
+}*/
+/* 按钮的css定义:对应css中的“button”，这里为按钮的风格设置，可定义内容为背景、字体、颜色、边框等 */
+.btn2
+{
+	/*font-size: 9pt;height: 20px; width:60*/
+	/*BORDER-RIGHT:   #2C59AA   1px   solid;   PADDING-RIGHT:   2px;   BORDER-TOP:   #2C59AA   1px   solid;   PADDING-LEFT:   2px;   FONT-SIZE:   12px;   FILTER:   progid:DXImageTransform.Microsoft.Gradient(GradientType=0,   StartColorStr=#ffffff,   EndColorStr=#C3DAF5);   BORDER-LEFT:   #2C59AA   1px   solid;   CURSOR:   hand;   COLOR:   black;   PADDING-TOP:   2px;   BORDER-BOTTOM:   #2C59AA   1px   solid*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #31335d;/*852107*/  
+	/*font-weight: bold;*/
+	background-image:url(../images/btnbg.gif);
+	padding-top: 2px;
+	padding-bottom: 0px;
+    FILTER: glow(color=#ffffff,strength=3) dropshadow(color=#ffffff,offx=1, offy=1, positive=1); 
+	border: 1px solid #86959e;
+	height:19px;
+	width:85px;
+}
+/* 下拉列表框的css定义:对应css中的“select”，这里为下拉列表框的风格设置，可定义内容为背景、字体、颜色、边框等 */
+/*select
+{
+font-size: 9pt;height: 20px;
+}
+*/
+td.thead{
+font-size:12px;
+color:#000;
+border-top:1px solid #000;
+border-bottom:1px solid #000;
+border-left:1px solid #000;
+border-right:1px solid #000;
+text-align:center;
+padding:4px 4px 4px 8px;
+background:#E9EFFF;
+font-weight:bold;
+}
+td.theadTitle{
+font-size:12px;
+color: #330000;
+border-top:1px solid #000;
+border-bottom:1px solid #000;
+border-left:1px solid #000;
+border-right:1px solid #000;
+text-align:center;
+padding:4px 4px 4px 8px;
+/*background:#E9EFFF;*/
+background-color: #77C2E9;
+font-weight:bold;
+}
+td.thead2{
+font-size:12px;
+color:#000;
+border-top:1px solid #000;
+border-bottom:1px solid #000;
+border-left:1px solid #000;
+border-right:1px solid #000;
+text-align:left;
+padding:4px 4px 4px 8px;
+background:#E9EFFF;
+font-weight:bold;
+}
+td.table{
+border-right:1px solid #c1dad7;
+border-left:1px solid #c1dad7;
+border-bottom:1px solid #c1dad7;
+border-top:1px solid #c1dad7;
+font-size:12px;
+text-align:center;
+padding:1px 1px 1px 1px;
+color:#000;
+background:#F2F2F2;
+talbe-layout:fixed;
+}
+td.table2{
+border-right:1px solid #c1dad7;
+border-left:1px solid #c1dad7;
+border-bottom:1px solid #c1dad7;
+border-top:1px solid #c1dad7;
+font-size:12px;
+text-align:left;
+padding:1px 1px 1px 1px;
+color:#000;
+background:#F2F2F2;
+talbe-layout:fixed;
+}
+td.top{
+margin=0;
+padding=0;
+color:#f9f9d3;
+font-size:13px;
+cursor:hand;
+text-align:center;
+}
+td.bottom{    /* 横黑色*/
+border-bottom:1px solid #000;
+}
+
+td.border{
+border-bottom:1px solid #000;
+border-top:1px solid #000;
+border-left:1px solid #000;
+border-right:1px solid #000;
+background:#F5F5DC;
+text-align:center;
+padding:0;
+margin:0;
+}
+.tablebg {	background: #99a4aa url(../images/mainbg_left_19.gif) repeat-x left top;}
+.tablebg1 {	background: #86979f url(../images/mainbg_right_31.gif) repeat-x left top;}
+.tablebg2 {	background: #a9b3ba url(../images/mainbg_left_26.gif) repeat-x left top;}
+.tablebg3 {	background: #f3f5f6 url(../images/mainbg_left_27.gif) repeat-x left top;}
+
+TR.odd {
+	background-color: #FFFFFF;
+	color:#000000;
+	font-weight:normal;
+}
+TR.even {
+	background-color: #EFF1F3;
+	color:#000000;
+	font-weight:normal;
+}
+TR.odd .trOddInputText{
+	width:100%; border:none; background-color: #FFFFFF;
+}
+TR.even .trEvenInputText{
+	width:100%; border:none; background-color: #EFF1F3;
+}
+TR.odd,TR.even .trAddTextBorderNone{
+	width:100%; border:none;;
+}
+.trAddTextBorderNone{
+	width:100%; border:none;
+}
+.dataEdit{
+	border:#999 1px solid;
+	height:20px;
+	background:#fff url(../images/dataEdit.gif) no-repeat fixed right;
+}
+/*--输入页标题行样式--*/
+TR.tableHead {
+	text-align: center;
+	COLOR: #000000;
+	BACKGROUND-COLOR: #eeeeee;
+	position: relative;
+	font-weight: bold;
+}
+
+/**div折叠**/
+.CollapsiblePanel {
+	margin: 0px;
+	padding: 0px;
+	border-left: solid 1px #CCC;
+	border-right: solid 1px #999;
+	border-top: solid 1px #999;
+	border-bottom: solid 1px #CCC;
+}
+.CollapsiblePanelTab {
+	font: bold 1em sans-serif;
+	background-color: #DDD;
+	border-bottom: solid 1px #CCC;
+	margin: 0px;
+	padding: 2px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+.CollapsiblePanelContent {
+	margin: 0px;
+	padding: 0px;
+}
+.CollapsiblePanelTab a {
+	color: black;
+	text-decoration: none;
+}
+.CollapsiblePanelOpen .CollapsiblePanelTab {
+	background-color: #EEE;
+}
+.CollapsiblePanelTabHover,  .CollapsiblePanelOpen .CollapsiblePanelTabHover {
+	background-color: #CCC;
+}
+.CollapsiblePanelFocused .CollapsiblePanelTab {
+	background-color: #3399FF;
+}
+
+/**新样式*/
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:14px;
+	}
+
+/*按钮菜单*/
+a.top:link {color: #FFFFFF; text-decoration:none;font-size:15px;}
+a.top:visited {color: #FFFFFF;text-decoration:none;font-size:15px;}
+a.top:hover{color: #ff0000;text-decoration:none;font-size:15px;}
+a.top:active {color: #ff0000;text-decoration:none;font-size:15px;}
+
+/*sub_menu*/
+a.sub_menu:link {color: #030d30; text-decoration:none; font-size:12px;}
+a.sub_menu:visited {color: #030d30;text-decoration:none; font-size:12px;}
+a.sub_menu:hover{color: #ff4d02;text-decoration:none; font-size:12px;}
+a.sub_menu:active {color: #ff4d02;text-decoration:none; font-size:12px;}
+
+
+.visited_menu {
+ color:#004c94;
+}
+
+.table_box {
+	border-right:1px solid #7ba8e3;
+	border-left:1px solid #7ba8e3;
+	border-bottom:1px solid #7ba8e3;
+	border-top:1px solid #7ba8e3;
+	font-size:14px;
+	color:#000c32;
+	padding:0 0 10px 15px;
+	background:#f0f4ff;
+	margin:20px 0px 0px 8px;
+}
+
+/*输入框*/
+.input {
+	border: #86959e 1px solid;
+	font-size:14px;
+}
+.tdInputText{width: 100%;font-size: 12px;margin: -1px;border: thin;line-height: 15px;}
+select{
+	position:relative;
+	font-size:14px;
+	line-height:14px;
+	border:#86959e 1px solid;
+	color:#000c32;
+	padding-left:10px;
+} 
+.table2_box {
+	font-size:14px;
+	border: #7ba8e3 1px solid;
+	color:#000c32;
+	margin:20px 0px 0px 8px;
+}
+.table2_sub {
+	font-size:12px;
+}
+.table2_input {
+	border: #7ba8e3 1px solid;
+	font-size:12px;
+	width:30px;
+}
+
+
+/*login.html 样式*/
+.banquan {
+	padding-top:5px;
+	padding-right:10px;
+	font-size:12px;
+}
+.font_1 {
+	color:#FFFFFF;
+	font-size:12px;
+}
+/*背景 样式*/
+body {
+	background-image: url(../images/body_bg.jpg);
+}
+/*按钮 样式*/
+.btn {
+	font-size: 14px;
+	height:20px;
+	padding: 0px 15px;
+	border: #86959e 1px solid;
+	background: url(../images/btn_submit_bg.jpg) repeat-x;
+}
+/*表格数据列表样式*/
+.tableData,.tableDataOther{background: #BADDFA;}
+.tableData th,.tableDataOther th{background: #BADDFA;text-align: center;padding: 5px 2px;}
+.tableData tr,.tableDataOther tr{background: #FFFFFF;}
+.tableData tr.parentItem,.tableDataOther tr.parentItem{background:#DDDDDD;cursor: pointer;}
+.tableDataOther tr td{text-align: right;}

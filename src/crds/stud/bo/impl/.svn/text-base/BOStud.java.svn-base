@@ -1,0 +1,107 @@
+/**
+ * product name :media
+ */
+package crds.stud.bo.impl;
+
+import java.util.List;
+
+import crds.stud.bo.IBOStud;
+import crds.stud.dao.IDAOStud;
+import crds.stud.web.form.FormStud;
+
+//import org.apache.taglibs.standard.lang.jstl.Logger;
+
+/**
+ * 
+ * 
+ * @version : 1.0
+ * @author : maogf
+ * @date : May 4, 2009 11:05:55 AM
+ * @email : maogenfeng@gmail.com
+ */
+public class BOStud implements IBOStud {
+
+	private IDAOStud dao;
+
+	public void setDAOStud(IDAOStud dao) {
+		this.dao = dao;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List queryTest() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.queryTest();
+
+	}
+
+	/** ��ȡѧ����Ϣ */
+	@SuppressWarnings("unchecked")
+	public List studentInfo(FormStud formstud) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.studentInfo(formstud);
+	}
+
+	/**
+	 * @SuppressWarnings("unchecked") public List queryTest2(String companyName
+	 *                                ) throws Exception { // TODO
+	 *                                Auto-generated method stub
+	 * 
+	 *                                return dao.queryTest2(companyName); }
+	 */
+	public List subInfo() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.subinfo();
+	}
+
+	public boolean addInfo(FormStud addform) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.addinfo(addform);
+	}
+
+	public boolean delInfo(int id) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.delinfo(id);
+	}
+
+	public List getAlterList(int id) throws Exception {
+		return dao.getalterList(id);
+	}
+
+	// public List getAlterList(int id,int bol) throws Exception {
+	// // TODO Auto-generated method stub
+	// //if(bol==1){
+	// return dao.getalterList(id);}
+	// // else{
+	// // return dao.getselectList(id);
+	// // }
+	// }
+	public boolean alterInfo(FormStud alterform) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.alterinfo(alterform);
+	}
+
+	public List student_query(FormStud formstud) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.Student_query(formstud);
+	}
+
+	public List student_query1(FormStud formstud) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.Student_query1(formstud);
+	}
+
+	public List getresList() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.getreslist();
+	}
+
+	public List getspecList() throws Exception {
+		// TODO Auto-generated method stub
+		return dao.getspeclist();
+	}
+
+	public boolean checkUserExists(FormStud addform) throws Exception 
+	{
+		return(dao.checkUserExists(addform));
+	}
+}

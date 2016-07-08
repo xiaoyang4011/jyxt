@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<crds_system comment="此表主要用于sys用户第一次登录时对系统相应表做一些数据初始化操作">
+	<operation comment="权限列表数据SQL,此SQL语句列表主要是针对表SYSTEM_OPERATION_INFO做一些数据插入操作">
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('00', 'CRDS系统', 'N', '0', '', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('01', '工作桌面', 'N', '1', '', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0101', '工作台', 'Y', '2', 'to_queryHomeCompanyInfo.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0102', '我的客户', 'Y', '2', 'queryMyClient.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0103', '新增公司', 'Y', '2', 'to_add_basicInfo.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('02', '公司概况', 'Y', '1', 'to_modify_basicinfo.do?toDetail=1', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('03', '财务分析', 'N', '1', '', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0301', '财务报表', 'Y', '2', 'query_finan_state_detail.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0302', '财务比率', 'Y', '2', 'query_finan_ratio_info.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0303', '现金流结构', 'Y', '2', 'queryCashStruInfo.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0304', '趋势分析', 'Y', '2', 'toTrendAnaly.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0305', '财务预测', 'Y', '2', 'query_finan_list_detail.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0306', '报表风险', 'Y', '2', 'queryFinanRiskInfo.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0307', '情景分析', 'Y', '2', 'queryFinanceInfo.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0308', '预警设置', 'Y', '2', 'toModifyFinanWarnSet.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0310', '资本结构图', 'Y', '2', 'showCapitalPicture.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0309', '同业比较', 'Y', '2', 'queryComparision.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('05', '信用评级', 'Y', '1', 'to_show_company_rate.do', 'Y', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('06', '组合管理', 'N', '1', '', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0601', '组合分析', 'Y', '2', 'to_combianaly_query.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0602', '邮件预警', 'Y', '2', 'query_emailWarn_list.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0603', '组合试算', 'Y', '2', 'to_query_pilot.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('07', '系统管理', 'N', '1', '', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0701', '权限管理', 'Y', '2', 'toRightManage.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0702', '模版管理', 'Y', '2', 'toTemplateManage.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0703', '风参管理', 'Y', '2', 'toRatParaManage.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0704', '其他参数表', 'Y', '2', 'toOtherManage.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0705', '日常维护', 'Y', '2', 'to_raoutine_attention_manage.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0706', '报表定义', 'Y', '2', 'to_raoutine_attention_manage.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('08', '统计查询', 'N', '1', '', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0801', '债券查询', 'Y', '2', 'to_bondquery.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0802', '评级查询', 'Y', '2', 'query_rating_info.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0803', '授信查询', 'Y', '2', 'toGrantManage.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0804', '操作查询', 'Y', '2', 'to_bondquery.do', 'N', 'N')
+		</insert>
+		<insert>
+		insert into SYSTEM_OPERATION_INFO (OPERATION_ID, DESCRIPTION, IS_LEAF, TREELEVEL, LINK, IS_POS_COMPANY_CODE, IS_BUTTON_CONTORL)
+		values ('0805', '利差分析', 'Y', '2', 'to_margin_custom.do', 'N', 'N')
+		</insert>
+	</operation>
+	<roleRights comment="角色对应权限数据列表">
+		<B>
+			<R00 name="客户经理">00,01,0101,0102,0103,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,08,0801,0802,0803,0804,0805</R00>
+			<R01 name="基金经理">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,0603,08,0801,0802,0803,0804,0805</R01>
+			<R02 name="部门经理">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R02>
+			<R03 name="风险经理">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R03>
+			<R04 name="信息录入员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310</R04>
+			<R05 name="任务分配人">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310</R05>
+			<R06 name="信息监察员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R06>
+			<R07 name="日常维护员">00,01,0101</R07>
+			<R08 name="交易员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R08>
+			<R09 name="研究员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05</R09>
+			<R10 name="业务系统管理员">00,01,0101,07,0702,0703,0704,0705,0706</R10>
+			<!--非[基本角色]的角色(即任务审批人角色)只能分配以下的权限.-->
+			<R11 name="1级任务审批人">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,08,0801,0802,0803,0804,0805</R11>
+		</B>
+		<F>
+			<R00 name="分析师">00,01,0101,0102,0103,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,08,0801,0802,0803,0804,0805</R00>
+			<R01 name="基金经理">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,0603,08,0801,0802,0803,0804,0805</R01>
+			<R02 name="部门经理">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R02>
+			<R03 name="风险经理">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R03>
+			<R04 name="信息录入员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310</R04>
+			<R05 name="任务分配人">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310</R05>
+			<R06 name="信息监察员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R06>
+			<R07 name="日常维护员">00,01,0101</R07>
+			<R08 name="交易员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,06,0601,0602,08,0801,0802,0803,0804,0805</R08>
+			<R09 name="研究员">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05</R09>
+			<R10 name="业务系统管理员">00,01,0101,07,0702,0703,0704,0705,0706</R10>
+			<!--非[基本角色]的角色(即任务审批人角色)只能分配以下的权限.-->
+			<R11 name="1级任务审批人">00,01,0101,02,03,0301,0302,0303,0304,0305,0306,0307,0308,0309,0310,05,08,0801,0802,0803,0804,0805</R11>
+		</F>
+	</roleRights>
+</crds_system>

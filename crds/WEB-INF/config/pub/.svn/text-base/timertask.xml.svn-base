@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<bean id="CRDS_EVALUATION_EMAILWARING_PROC" class="crds.pub.timerTask.recheck.CRDS_EVALUATION_EMAILWARING_PROC" singleton="false" />
+	<!-- <bean id="EMAIL_ALERT" class="crds.pub.timerTask.recheck.EMAIL_ALERT" singleton="false" />
+	 -->
+</beans>

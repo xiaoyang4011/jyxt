@@ -1,0 +1,218 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; }
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 0px;
+	height: 55px;
+	width: 100%;
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+SELECT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 20px
+}
+BODY {
+	FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 20px
+}
+SELECT {
+	FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 20px
+}
+INPUT {
+	FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 20px
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+DL {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DD {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DT {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.zstdk01 {
+	BORDER-TOP: #ce3700 5px solid; BORDER-BOTTOM: #ce3700 1px solid
+}
+.zstdk02 {
+	BORDER-RIGHT: #bbbbbb 1px solid; BORDER-TOP: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; BORDER-BOTTOM: #bbbbbb 1px solid
+}
+.zstdk03 {
+	BORDER-RIGHT: #6992c6 1px solid; BORDER-TOP: #6992c6 1px solid; BORDER-LEFT: #6992c6 1px solid; BORDER-BOTTOM: #6992c6 1px solid
+}
+.simg1 {
+	BORDER-RIGHT: #b3cbe9 1px solid; BORDER-TOP: #b3cbe9 1px solid; BORDER-LEFT: #b3cbe9 1px solid; BORDER-BOTTOM: #b3cbe9 1px solid
+}
+.fonttitle {
+	FONT-SIZE: 18px; LINE-HEIGHT: 28px; FONT-FAMILY: 黑体
+}
+.fontblack {
+	COLOR: #000
+}
+.fontwhite {
+	COLOR: #fff
+}
+.fontred {
+	COLOR: #f00
+}
+.fontred2 {
+	COLOR: #cf0c8c
+}
+.fontgreen {
+	COLOR: #04a300
+}
+.fontgreen2 {
+	COLOR: #0d64ce
+}
+.fontyellow {
+	COLOR: #fc7328
+}
+.fontyellow2 {
+	COLOR: #a9cd06
+}
+.fontyellow3 {
+	COLOR: #ffc801
+}
+.zsfontred {
+	COLOR: #ce3700
+}
+.fontblue {
+	COLOR: #0f0cbf
+}
+.zsfontblue {
+	COLOR: #6992c6
+}
+.fontgrey {
+	COLOR: #888888
+}
+.fontl16 {
+	LINE-HEIGHT: 16px
+}
+.fontl18 {
+	LINE-HEIGHT: 18px
+}
+.fontl21 {
+	LINE-HEIGHT: 21px
+}
+.fontl22 {
+	LINE-HEIGHT: 22px
+}
+.fontl24 {
+	LINE-HEIGHT: 24px
+}
+.fontl26 {
+	LINE-HEIGHT: 26px
+}
+.fontl30 {
+	LINE-HEIGHT: 30px
+}
+.font2em {
+	TEXT-INDENT: 2em
+}
+.font14px {
+	FONT-SIZE: 14px
+}
+.font18px {
+	FONT-SIZE: 18px
+}
+.fontbold {
+	FONT-WEIGHT: bold
+}
+.fontpp6 {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px
+}
+.fontpl12 {
+	PADDING-LEFT: 12px
+}
+.fontpp18 {
+	PADDING-RIGHT: 18px; PADDING-LEFT: 18px
+}
+A.whitenl {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+A.whitenl:hover {
+	TEXT-DECORATION: underline
+}
+A.whitenl1 {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+A.whitenl1:hover {
+	TEXT-DECORATION: none
+}
+A.blacknl {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A.blacknl:hover {
+	TEXT-DECORATION: underline
+}
+A.blackrednl {
+	COLOR: #000; TEXT-DECORATION: underline
+}
+A.blackrednl:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+A.bluerednl {
+	COLOR: #0036be; TEXT-DECORATION: underline
+}
+A.bluerednl:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+A.blackrednl1 {
+	COLOR: #000; TEXT-DECORATION: underline
+}
+A.blackrednl1:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+A.nl {
+	TEXT-DECORATION: none
+}
+A.nl:hover {
+	TEXT-DECORATION: underline
+}
+A.ul {
+	TEXT-DECORATION: underline
+}
+A.ul:hover {
+	TEXT-DECORATION: none
+}
+.marb2 {
+	MARGIN-BOTTOM: 2px
+}
+.marb4 {
+	MARGIN-BOTTOM: 4px
+}
+.marb6 {
+	MARGIN-BOTTOM: 6px
+}
+.tbgrb {
+	BACKGROUND-POSITION: right bottom; BACKGROUND-REPEAT: no-repeat
+}
+#zslist1 TD {
+	PADDING-LEFT: 20px
+}

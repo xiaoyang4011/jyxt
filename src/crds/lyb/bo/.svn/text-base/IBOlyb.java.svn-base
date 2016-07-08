@@ -1,0 +1,18 @@
+package crds.lyb.bo;
+
+import java.util.List;
+import crds.lyb.web.form.Formlyb;
+
+
+public interface IBOlyb {
+	@SuppressWarnings("unchecked")
+	public int Add(Formlyb form) throws Exception;
+	@SuppressWarnings("unchecked")
+	public List Bro(Formlyb form) throws Exception;
+	
+	@SuppressWarnings("unchecked")
+	public int Update(Formlyb form) throws Exception;
+	public int Del(Formlyb form) throws Exception;
+	@SuppressWarnings("unchecked")
+	public List Jump(Formlyb form) throws Exception;
+}

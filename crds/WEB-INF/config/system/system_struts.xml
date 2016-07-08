@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  	<form-beans>
+		<!-- 用户 -->
+		<form-bean name="formUser" type="crds.system.user.web.form.FormUser" />
+	    <form-bean name="formAddUserPoint" type="crds.system.user.web.form.PLAddUserPoint" />
+	    <form-bean name="adduserForm" type="crds.system.user.web.form.AddUser"></form-bean>	
+		<form-bean name="InputUserForm" type="crds.system.user.web.form.InputUser"></form-bean>
+	</form-beans>
+	
+	
+	<action-mappings>
+  
+	<!-- 查询全部用户信息-->
+		<action path="/userindoPage" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="usershowPage" scope="request">
+	 	 <forward name="succ" path="/system/user/usershow.jsp" />
+				<forward name="succ" path="/system/user/userShowPage.jsp" />
+		</action>
+		
+		
+		
+		<!-- 添加用户 -->
+		
+		<action path="/addUser1" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="addUser" scope="request">
+			<!-- <forward name="true" path="/system/user/ok.jsp" /> -->
+			<forward name="true" path="/userindoPage.do" />
+			<forward name="flase" path="/addUserPackage.do" />
+		</action>
+	
+	   <!-- 添加用户页面 -->
+		
+		<action path="/addUserPackage" type="crds.system.user.web.action.useraction"
+		    parameter="addUserPage" scope="request">
+			
+		<!--	 <forward name="addUserpage" path="/system/user/addUserTest.jsp" /> -->
+			 <forward name="addUserpage" path="/system/user/addUserShow.jsp" /> 
+			
+		</action>
+		
+		
+		
+		<!-- 删除用户 -->
+		
+		<action path="/userdelete" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="deleteUser" scope="request">
+			<!-- <forward name="true" path="/system/user/ok.jsp" /> -->
+			<forward name="true" path="/userindoPage.do" />
+			<forward name="flase" path="/userindoPage.do" />
+		</action>
+		
+		<!-- 按条件查询用户 -->
+		<action path="/selectUser" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="selectUser" scope="request">
+			<!-- <forward name="true" path="/system/user/ok.jsp" /> -->
+			<forward name="succ" path="/system/user/usershow.jsp"/>
+		</action>
+		
+		<!-- maogenfeng end -->
+		
+		
+		<!-- 修改 前的准备数据-->
+		
+		<action path="/updateuser" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="updateUser" scope="request">
+			 <!-- <forward name="update" path="/system/user/UpdateUser.jsp" /> --> 
+			 <forward name="update" path="/system/user/upDateUserPage.jsp" />
+		</action>
+		
+		<!-- 执行修改操作 -->
+		<action path="/updatePackage" type="crds.system.user.web.action.useraction"
+		    name="adduserForm" parameter="updatePackage" scope="request">
+			
+			<forward name="updatePackage" path="/userindoPage.do" />
+			
+			<forward name="updatePackageNO" path="/updateuser.do" />
+		</action>
+		<!-- /first-->
+		<action path="/first" type="crds.system.user.web.action.useraction"
+		     parameter="first" scope="request">
+		</action>
+		
+		<!--  系部信息-->
+		<action path="/second" type="crds.system.user.web.action.useraction"
+		     parameter="second" scope="request">
+		</action>
+		
+		<!-- 班级信息 -->
+		<action path="/third" type="crds.system.user.web.action.useraction"
+		     parameter="third" scope="request">
+		</action>
+	
+	    
+	    <!--查询用户角色 -->
+	    <action path="/juese" type="crds.system.user.web.action.useraction"
+		     parameter="juese" scope="request">
+		</action>
+		
+		
+		<!-- ajax的测试方法 -->
+		<action path="/ajax" type="crds.system.user.web.action.useraction"
+		     parameter="ajax" scope="request">
+		</action>
+		
+		
+		
+	<!-- 删除所有的用户 -->
+	
+		<action path="/userdeleteall" type="crds.system.user.web.action.useraction"
+			 parameter="deleteAll" scope="request">
+			<forward name="userdeleteall" path="/userindoPage.do"/>
+		</action>
+		
+	<!-- 审核用户 -->
+	
+		<action path="/shenhe" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="shenhe" scope="request">
+			<forward name="shenhe" path="/userindoPage.do"/>
+		</action>
+	<!-- 批量审核用户 -->
+	
+		<action path="/plshenhe" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="plshenhe" scope="request">
+			<forward name="plshenhe" path="/userindoPage.do"/>
+		</action>
+	<!-- 批量导入用户 -->
+	
+		<action path="/pldaoru" type="crds.system.user.web.action.useraction"
+			name="InputUserForm" parameter="pldaoru" scope="request">
+			<forward name="ok" path="/system/user/inputsucc.jsp"/>
+			<forward name="uploaderr" path="/system/user/inputerr.jsp"/>
+			<forward name="filereaderr" path="/system/user/inputerr2.jsp"/>
+		</action>
+		
+			<!-- 批量导入Excel删除用户 -->
+	
+		<action path="/plshanchu" type="crds.system.user.web.action.useraction"
+			name="InputUserForm" parameter="plshanchu" scope="request">
+			<forward name="ok" path="/system/user/deletesucc.jsp"/>
+			<forward name="uploaderr" path="/system/user/inputerr.jsp"/>
+			<forward name="filereaderr" path="/system/user/inputerr2.jsp"/>
+		</action>
+		
+		<!-- 批量停用用户 -->
+	
+		<action path="/stopuser" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="stopuser" scope="request">
+			<forward name="plshenhe" path="/userindoPage.do"/>
+		</action>
+		
+		
+		
+		
+			<!-- 批量增加用户的积分-->
+	
+		<action path="/pladduserpoint" type="crds.system.user.web.action.useraction"
+			name="formAddUserPoint" parameter="pladduserpoint" scope="request">
+			<forward name="ok" path="/system/user/update_user_point.jsp"/>
+
+		</action>
+		<!-- 批量增加用户的积分-->
+	
+		<action path="/pladduserpointT" type="crds.system.user.web.action.useraction"
+			name="formAddUserPoint" parameter="pladduserpointT" scope="request">
+			<forward name="ok" path="/system/user/update_user_point_succ.jsp"/>
+
+		</action>
+				<action path="/pldr_userinfo" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="Add_user" scope="request">
+			<forward name="succ" path="/system/user/Warning.jsp?id=5"/>
+			<forward name="fail" path="/system/user/Warning.jsp?id=6"/>
+
+		</action>
+		
+
+		
+	</action-mappings>
+</struts-config>

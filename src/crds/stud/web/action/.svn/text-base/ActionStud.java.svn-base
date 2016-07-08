@@ -1,0 +1,209 @@
+package crds.stud.web.action;
+
+import java.util.List;
+import java.awt.image.BufferedImage;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import crds.stud.bo.IBOStud;
+import crds.stud.web.form.FormStud;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.taglibs.standard.lang.jstl.Logger;
+import org.springframework.web.struts.MappingDispatchActionSupport;
+
+
+
+public final class ActionStud extends MappingDispatchActionSupport {
+	
+	private Map<String, BufferedImage> map = null;
+	private LinkedHashMap<String, LinkedHashMap<String, String>> map_data=null;
+	
+
+	public IBOStud getBO() {
+		return (IBOStud) this.getWebApplicationContext().getBean(
+		"BOStud");
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public ActionForward queryTest(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+//		 List list=getBO().queryTest();
+//		 request.setAttribute("company", list);
+		return mapping.findForward("succ");
+	}
+	
+	
+
+	@SuppressWarnings("unchecked")
+	public ActionForward studentPage(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		return mapping.findForward("succ");
+	}
+	
+	@SuppressWarnings("unchecked")
+	public ActionForward studentInfo(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		FormStud formstud=(FormStud) form;
+		if (formstud.getRowsPerPage() == 0) {
+			formstud.setRowsPerPage(5);
+		}
+		List list=getBO().studentInfo(formstud);
+		request.setAttribute("student",list);
+		return mapping.findForward("succ");
+	}
+	//跳转至显示
+	public ActionForward jump(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		List list=getBO().subInfo();
+		 request.setAttribute("student", list);
+			return mapping.findForward("succ");
+		}
+	//跳转至添加
+	public ActionForward jump2(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		List list1=getBO().getresList();
+		List list2=getBO().getspecList();
+		 request.setAttribute("restypelist", list1);
+		 request.setAttribute("speclist", list2);
+		 this.saveToken(request);
+			return mapping.findForward("succ");
+		}
+	//添加子库
+	public ActionForward addsub(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		FormStud addform=(FormStud)form;
+		ActionForward forward = null;		
+		if(this.isTokenValid(request)) {
+			IBOStud bo=getBO();
+			try {
+				if(bo.checkUserExists(addform)) {
+					List list1=getBO().getresList();
+					List list2=getBO().getspecList();
+					 request.setAttribute("restypelist", list1);
+					 request.setAttribute("speclist", list2);
+					request.setAttribute("message","子库编码已存在!");
+					forward = mapping.findForward("fail");
+				}else {
+					bo.addInfo(addform);//添加	
+					request.setAttribute("message","增加成功");
+					forward = mapping.findForward("succ");
+					this.resetToken(request);
+				}
+			} catch (RuntimeException e) {
+				e.printStackTrace();
+				List list1=getBO().getresList();
+				List list2=getBO().getspecList();
+				 request.setAttribute("restypelist", list1);
+				 request.setAttribute("speclist", list2);
+				request.setAttribute("message","增加失败");
+				forward = mapping.findForward("fail");					
+			}
+		}else {
+			request.setAttribute("message","请不要重复提交");
+			forward = mapping.findForward("succ");
+		}
+		
+		return forward;
+	}
+	//删除子库
+	public ActionForward delsub(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		FormStud addform=(FormStud)form;
+		int id=addform.getSublibid();
+		boolean bol=getBO().delInfo(id);
+		if(bol==true){
+			return mapping.findForward("succ");}
+		else{
+			return mapping.findForward("fail");
+		}
+		//return mapping.findForward("succ");
+	}
+	//跳转修改
+	public ActionForward jump3(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		FormStud addform=(FormStud)form;
+		List list1=getBO().getresList();
+		List list2=getBO().getspecList();
+		 request.setAttribute("restypelist", list1);
+		 request.setAttribute("speclist", list2);
+		int id=addform.getSublib_id();
+		List list=getBO().getAlterList(id);
+		request.setAttribute("student", list);
+		this.saveToken(request);
+			return mapping.findForward("succ");
+	
+	}
+	//修改
+	public ActionForward altersub(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		FormStud alterform=(FormStud)form;
+		boolean n=getBO().alterInfo(alterform);
+		if(n){
+		request.setAttribute("addsuccess", "success"); //标记是否是已经添加成功的页面
+		}
+		return mapping.findForward("succ");
+//		FormStud alterform=(FormStud)form;
+//		ActionForward forward = null;		
+//		if(this.isTokenValid(request)) {
+//			IBOStud bo=getBO();
+//			try {
+//				if(bo.checkUserExists(alterform)) {
+//					List list1=getBO().getresList();
+//					List list2=getBO().getspecList();
+//					 request.setAttribute("restypelist", list1);
+//					 request.setAttribute("speclist", list2);
+//					int id=alterform.getSublib_id();
+//					List list=getBO().getAlterList(id);
+//					request.setAttribute("student", list);
+//					request.setAttribute("message","子库编码已存在!");
+//					forward = mapping.findForward("fail");
+//				}else {
+//					bo.alterInfo(alterform);	
+//					request.setAttribute("message","修改成功");
+//					forward = mapping.findForward("succ");
+//					this.resetToken(request);
+//				}
+//			} catch (RuntimeException e) {
+//				e.printStackTrace();
+//				List list1=getBO().getresList();
+//				List list2=getBO().getspecList();
+//				 request.setAttribute("restypelist", list1);
+//				 request.setAttribute("speclist", list2);
+//				int id=alterform.getSublib_id();
+//				List list=getBO().getAlterList(id);
+//				request.setAttribute("student", list);
+//				request.setAttribute("message","修改失败");
+//				forward = mapping.findForward("fail");					
+//			}
+//		}else {
+//			request.setAttribute("message","请不要重复提交");
+//			forward = mapping.findForward("succ");
+//		}
+//		
+//		return forward;
+	}
+	//条件查找
+	public ActionForward jump4(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		List list=getBO().subInfo();
+		 request.setAttribute("student", list);
+			return mapping.findForward("succ");
+		}
+	//分页显示
+	public ActionForward test(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		FormStud formstud=(FormStud)form;
+		if (formstud.getRowsPerPage() == 0) {
+			formstud.setRowsPerPage(10);
+			}
+		List list=null;
+		if(("1").equals(request.getParameter("listPage"))){
+			list=getBO().student_query(formstud);
+		}else{
+			 list=getBO().student_query1(formstud);
+		}
+
+		request.setAttribute("student", list);
+		return mapping.findForward("succ");
+	}
+
+
+}

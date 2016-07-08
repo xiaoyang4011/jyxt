@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 配置Form been  名字和路径-->	
+	<form-bean name="Formlyb" type="crds.lyb.web.form.Formlyb" />		
+	</form-beans>
+	<!-- 配置action-mappings-->	
+		<action-mappings>	
+		
+		
+					<!-- 增加-->
+				<action path="/add" type="crds.lyb.web.action.Actionlyb" 
+						name="Formlyb" parameter="AddMessage" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/lyb/addly.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+					<!-- 浏览-->
+				<action path="/browse" type="crds.lyb.web.action.Actionlyb" 
+						name="Formlyb" parameter="BroMessage" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/lyb/lyb_bro.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+				
+				
+					<!-- 跳转Action-->
+				<action path="/jump" type="crds.lyb.web.action.Actionlyb" 
+						name="Formlyb" parameter="Jump" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/lyb/addly.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+			    	<!-- 修改跳转传值Action-->
+				<action path="/jump2" type="crds.lyb.web.action.Actionlyb" 
+						name="Formlyb" parameter="Jump2" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/lyb/Update.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+				
+				
+					<!-- 修改-->
+				<action path="/update" type="crds.lyb.web.action.Actionlyb" 
+						name="Formlyb" parameter="Update" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/lyb/Warning.jsp?id=5" />
+				<forward name="fail" path="/lyb/Warning.jsp?id=6" />	<!-- 配置action返回界面-->	
+				</action>
+				<!-- 删除-->
+				<action path="/del" type="crds.lyb.web.action.Actionlyb" 
+						name="Formlyb" parameter="del" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/lyb/Warning.jsp?id=2" />
+				<forward name="fail" path="/lyb/Warning.jsp?id=1" />	<!-- 配置action返回界面-->	
+				</action>
+				
+				
+		</action-mappings>
+</struts-config>

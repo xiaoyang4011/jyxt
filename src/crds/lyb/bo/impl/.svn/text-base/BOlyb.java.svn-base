@@ -1,0 +1,50 @@
+package crds.lyb.bo.impl;
+
+import java.util.List;
+import crds.lyb.bo.IBOlyb;
+import crds.lyb.dao.IDAOlyb;
+import crds.lyb.web.form.Formlyb;
+import crds.lyb.bo.IBOlyb;
+import crds.lyb.dao.IDAOlyb;
+
+
+
+
+@SuppressWarnings("unused")
+public class BOlyb implements IBOlyb{	
+	private IDAOlyb dao;
+	public void setDAOlyb(IDAOlyb dao) {
+		this.dao = dao;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public int Add(Formlyb form) throws Exception 
+	{
+		return (dao.Add(form));
+	}
+
+	@SuppressWarnings("unchecked")
+	public List Bro(Formlyb form) throws Exception 
+	{
+		return (dao.Bro(form));
+	}
+
+	
+
+	@SuppressWarnings("unchecked")
+	public int Update(Formlyb form) throws Exception 
+	{
+		return (dao.Update(form));
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List Jump(Formlyb form) throws Exception 
+	{
+		return (dao.Jump(form));
+	}
+	//调用dao进行删除
+	public int Del(Formlyb form) throws Exception
+	{
+		return (dao.Del(form));
+	}
+}

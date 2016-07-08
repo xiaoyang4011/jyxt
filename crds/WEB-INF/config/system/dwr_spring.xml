@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">	
+
+   
+ <bean id="DAODepartThreeManage" class="crds.basis.dwr.dao.impl.DAOThreeManage" singleton="false"></bean>  
+ <bean id="BODepartThreeManage" class="crds.basis.dwr.dao.impl.DAOThreeManage" singleton="false"></bean>
+
+	
+	<bean id="DAOSublibThreeLevel" class="crds.basis.dwr.dao.impl.DAOSublibThreeLevel" singleton="false"></bean>
+	<bean id="BOSublibThreeLevel" class="crds.basis.dwr.dao.impl.DAOSublibThreeLevel" singleton="false"></bean>
+	
+</beans>

@@ -1,0 +1,616 @@
+BODY {
+	FONT-SIZE: 12px; BACKGROUND: #fff; MARGIN: 0px 0px; COLOR: #000; FONT-FAMILY: "宋体"
+}
+TABLE {
+	LINE-HEIGHT: 100%
+}
+INPUT {
+	LINE-HEIGHT: 160%
+}
+SELECT {
+	LINE-HEIGHT: 160%
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+A:link {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ad210e; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #FFF;
+	font-size: 16px;
+}
+.fb {
+	FONT-WEIGHT: bold
+}
+.f14 {
+	FONT-SIZE: 14px
+}
+.fwhe {
+	COLOR: #fff
+}
+.fc114 {
+	COLOR: #114272
+}
+.lred {
+	COLOR: red
+}
+A.lred {
+	COLOR: red
+}
+A.lred:link {
+	COLOR: red
+}
+A.lred:visited {
+	COLOR: red
+}
+A.lred:hover {
+	TEXT-DECORATION: underline
+}
+.lwhite {
+	COLOR: #fff
+}
+A.lwhite {
+	COLOR: #fff
+}
+A.lblack:link {
+	COLOR: #fff
+}
+A.lwhite:visited {
+	COLOR: #fff
+}
+A.lwhite:hover {
+	TEXT-DECORATION: underline
+}
+.cl039 {
+	COLOR: #003399
+}
+A.lc039 {
+	COLOR: #003399
+}
+A.lc039:hover {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+.fgry {
+	COLOR: #333333
+}
+A.gry {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+A.gry:hover {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+A.gryul {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+A.gryul:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+.m6 {
+	MARGIN-TOP: 6px
+}
+.m2 {
+	MARGIN-TOP: 2px
+}
+.mb8 {
+	MARGIN-BOTTOM: 8px
+}
+.mb6 {
+	MARGIN-BOTTOM: 6px
+}
+.mb3 {
+	MARGIN-BOTTOM: 3px
+}
+.lh26 {
+	LINE-HEIGHT: 26px
+}
+.lh24 {
+	LINE-HEIGHT: 24px
+}
+.lh23 {
+	LINE-HEIGHT: 23px
+}
+.lh22 {
+	LINE-HEIGHT: 22px
+}
+.ti2 {
+	TEXT-INDENT: 2em
+}
+.dis {
+	DISPLAY: block
+}
+.undis {
+	DISPLAY: none
+}
+.mgt9 {
+	MARGIN-TOP: 9px
+}
+.mgt5 {
+	MARGIN-TOP: 5px
+}
+#chart DIV {
+	BORDER-RIGHT: #446f9a 1px solid; BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_01.gif); FLOAT: left; WIDTH: 72px; HEIGHT: 21px; TEXT-ALIGN: center
+}
+#chart .s {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_00.gif); WIDTH: 74px
+}
+#chartcon {
+	BORDER-RIGHT: #446f9a 1px solid; BORDER-TOP: #446f9a 1px; BORDER-LEFT: #446f9a 1px solid; BORDER-BOTTOM: #446f9a 1px solid
+}
+#tit1 DIV {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_03.gif); FLOAT: left; WIDTH: 85px; PADDING-TOP: 3px; HEIGHT: 21px; TEXT-ALIGN: center
+}
+#tit1 .s {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_02.gif)
+}
+#tit2 DIV {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_03.gif); FLOAT: left; WIDTH: 85px; PADDING-TOP: 3px; HEIGHT: 21px; TEXT-ALIGN: center
+}
+#tit2 .s {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_02.gif)
+}
+#tit3 DIV {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_03.gif); FLOAT: left; WIDTH: 85px; PADDING-TOP: 3px; HEIGHT: 21px; TEXT-ALIGN: center
+}
+#tit3 .s {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/tab_02.gif)
+}
+#cont1 A {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+#cont1 A:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+#cont2 A {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+#cont2 A:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+#cont3 A {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+#cont3 A:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+.borlblunb {
+	BORDER-RIGHT: #ccdcea 1px solid; BORDER-TOP: #ccdcea 1px solid; BORDER-LEFT: #ccdcea 1px solid; BORDER-BOTTOM: #ccdcea 1px
+}
+.borlblunt {
+	BORDER-RIGHT: #ccdcea 1px solid; BORDER-TOP: #ccdcea 1px; BORDER-LEFT: #ccdcea 1px solid; BORDER-BOTTOM: #ccdcea 1px solid
+}
+.borblu {
+	BORDER-RIGHT: #92adc8 1px solid; BORDER-TOP: #92adc8 1px solid; BORDER-LEFT: #92adc8 1px solid; BORDER-BOTTOM: #92adc8 1px solid
+}
+.borblunt {
+	BORDER-RIGHT: #92adc8 1px solid; BORDER-TOP: #92adc8 1px; BORDER-LEFT: #92adc8 1px solid; BORDER-BOTTOM: #92adc8 1px solid
+}
+.borlblu {
+	BORDER-RIGHT: #c6d5e5 1px solid; BORDER-TOP: #c6d5e5 1px solid; BORDER-LEFT: #c6d5e5 1px solid; BORDER-BOTTOM: #c6d5e5 1px solid
+}
+.txt1 {
+	WIDTH: 119px; HEIGHT: 18px
+}
+.f0052A6 {
+	COLOR: #0052a6
+}
+A.l0052A6 {
+	COLOR: #0052a6; TEXT-DECORATION: none
+}
+A.l0052A6:hover {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+.f0B74BF {
+	COLOR: #0b74bf
+}
+A.l0B74BF {
+	COLOR: #0b74bf; TEXT-DECORATION: none
+}
+A.l0B74BF:hover {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+.f003366 {
+	COLOR: #003366
+}
+A.l036 {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A.l036:hover {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+#big {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/big_bg.gif) repeat-x 50% top
+}
+#big A.big {
+	FONT-SIZE: 18px; COLOR: #d03100; LINE-HEIGHT: 32px; FONT-FAMILY: "黑体"; TEXT-DECORATION: none
+}
+#big A.big:hover {
+	FONT-SIZE: 18px; COLOR: #000; LINE-HEIGHT: 32px; FONT-FAMILY: "黑体"; TEXT-DECORATION: underline
+}
+.alto {
+	VERTICAL-ALIGN: top
+}
+.altb {
+	VERTICAL-ALIGN: bottom
+}
+.alce {
+	TEXT-ALIGN: center
+}
+.cja1 {
+	COLOR: #039
+}
+.cja1 A {
+	COLOR: #039
+}
+.cja1 A:hover {
+	COLOR: #f00
+}
+.cja2 {
+	COLOR: #fff
+}
+.cja2 A {
+	COLOR: #fff
+}
+.cja2 A:hover {
+	COLOR: #f00
+}
+.cja3 {
+	COLOR: #537da8
+}
+.cja3 A {
+	COLOR: #537da8
+}
+.cja3 A:hover {
+	COLOR: #f00
+}
+.cjp01 {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 11px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; PADDING-TOP: 0px
+}
+.cjp02 {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; PADDING-TOP: 0px
+}
+.cjp03 {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 18px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; COLOR: #039; LINE-HEIGHT: 23px; PADDING-TOP: 12px
+}
+.cjp04 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 29px; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; LINE-HEIGHT: 19px; PADDING-TOP: 6px
+}
+.cjp05 {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 14px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; LINE-HEIGHT: 23px; PADDING-TOP: 12px
+}
+.cjp06 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 18px; BACKGROUND: #ebebeb; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; LINE-HEIGHT: 23px; PADDING-TOP: 10px
+}
+.cjp07 {
+	PADDING-LEFT: 25px; FONT-WEIGHT: bold
+}
+.cjp08 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 12px; PADDING-TOP: 3px
+}
+.cjp09 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 15px; PADDING-BOTTOM: 6px; LINE-HEIGHT: 23px; PADDING-TOP: 6px
+}
+.cjp10 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 16px; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; LINE-HEIGHT: 27px; PADDING-TOP: 6px
+}
+.cjb01 {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 0px solid; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 1px solid
+}
+.cjb02 {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 1px solid; BACKGROUND: url(http://mat1.qq.com/finance/index910/canja05.gif); MARGIN: 7px 0px 2px; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 1px solid
+}
+.cjb03 {
+	BORDER-RIGHT: #d3d3d3 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d3d3d3 1px solid; PADDING-LEFT: 0px; BACKGROUND: #ebebeb; PADDING-BOTTOM: 5px; BORDER-LEFT: #d3d3d3 1px solid; PADDING-TOP: 12px; BORDER-BOTTOM: #d3d3d3 1px solid
+}
+.cjb04 {
+	BORDER-RIGHT: #b0b0b0 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #b0b0b0 1px solid; PADDING-LEFT: 2px; BACKGROUND: #fff; PADDING-BOTTOM: 2px; BORDER-LEFT: #b0b0b0 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #b0b0b0 1px solid
+}
+.cjb05 {
+	BORDER-TOP: #91b0d5 1px solid
+}
+.cjg01 {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/canja03.gif) no-repeat
+}
+.cjg02 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 28px; FONT-WEIGHT: bold; BACKGROUND: url(http://mat1.qq.com/finance/index910/canja04.gif) no-repeat; PADDING-BOTTOM: 0px; PADDING-TOP: 2px
+}
+.cjt01 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 26px; FONT-WEIGHT: bold; BACKGROUND: url(http://mat1.qq.com/finance/index910/canja01.gif) no-repeat; PADDING-BOTTOM: 0px; COLOR: #039; PADDING-TOP: 2px
+}
+.fontpl24 {
+	PADDING-LEFT: 24px
+}
+.fontpp12 {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px
+}
+.sfontblue1 {
+	COLOR: #0031e9
+}
+.fl {
+	FLOAT: left
+}
+.fr {
+	FLOAT: right
+}
+.fontbold {
+	FONT-WEIGHT: bold
+}
+A.sblue1rednl {
+	COLOR: #0036be; TEXT-DECORATION: none
+}
+A.sblue1rednl:hover {
+	COLOR: #fe0201; TEXT-DECORATION: underline
+}
+.stdk02 {
+	BORDER-RIGHT: #6993c6 1px solid; BORDER-TOP: #6993c6 1px solid; BORDER-LEFT: #6993c6 1px solid; BORDER-BOTTOM: #6993c6 1px solid
+}
+.stdk02b {
+	BORDER-BOTTOM: #6993c6 1px solid
+}
+.font2em {
+	TEXT-INDENT: 2em
+}
+#bluelink TD {
+	COLOR: #0036be
+}
+#bluelink A {
+	COLOR: #0036be; TEXT-DECORATION: underline
+}
+#bluelink A:hover {
+	COLOR: #fe0201
+}
+#bluelink A:visited {
+	COLOR: #6a6a6a
+}
+#bluelink A.red {
+	COLOR: #fe0201
+}
+#bluelink A.red:hover {
+	COLOR: #fe0201; TEXT-DECORATION: none
+}
+#bluelink A.red:visited {
+	COLOR: #fe0201
+}
+#bluelink A.blue:visited {
+	COLOR: #0036be
+}
+#bluelink A.nl {
+	TEXT-DECORATION: none
+}
+#bluelink A.nl:hover {
+	TEXT-DECORATION: underline
+}
+.sfontwhite {
+	COLOR: #fff
+}
+.fontpl20 {
+	PADDING-LEFT: 20px
+}
+.fontpl6 {
+	PADDING-LEFT: 6px
+}
+.fontl18 {
+	LINE-HEIGHT: 18px
+}
+.fontpp6 {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px
+}
+.simg1 {
+	BORDER-RIGHT: #b3cbe9 1px solid; BORDER-TOP: #b3cbe9 1px solid; BORDER-LEFT: #b3cbe9 1px solid; BORDER-BOTTOM: #b3cbe9 1px solid
+}
+.adbd {
+	BORDER-RIGHT: #cdcbcc 1px solid; BORDER-TOP: #cdcbcc 1px solid; BORDER-LEFT: #cdcbcc 0px solid; BORDER-BOTTOM: #cdcbcc 1px solid
+}
+.adbd A {
+	COLOR: #676767; TEXT-DECORATION: underline
+}
+.adbd A:hover {
+	COLOR: #f00; TEXT-DECORATION: none
+}
+.table_bd1 {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 1px solid; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 0px solid
+}
+.table_bd2 {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 0px solid; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 1px solid
+}
+.tit_hd_info {
+	COLOR: #003399
+}
+.tit_hd_info A {
+	COLOR: #003399
+}
+.tit_hd_1 {
+	PADDING-LEFT: 12px; FONT-WEIGHT: bold; COLOR: #fff
+}
+.fc3d6 {
+	COLOR: #3d64b2
+}
+.fc039 {
+	COLOR: #039
+}
+.dc_input {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(http://mat1.qq.com/finance/index910/bot.gif) no-repeat; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 60px; COLOR: #fff; HEIGHT: 19px; BORDER-RIGHT-WIDTH: 0px
+}
+.d_c_tablebd {
+	BORDER-RIGHT: #bccfe5 1px solid; BORDER-LEFT: #bccfe5 1px solid
+}
+.d_c_tit {
+	PADDING-LEFT: 18px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(http://mat1.qq.com/finance/index910/tit_bg1.gif) no-repeat left center; COLOR: #039
+}
+.d_c_tit A {
+	COLOR: #039
+}
+.d_c_tit A:hover {
+	COLOR: #f00
+}
+.fod {
+	BORDER-BOTTOM: #46719c 2px solid
+}
+.fod DIV {
+	BORDER-RIGHT: #46719c 1px solid; BORDER-TOP: #46719c 1px solid; FONT-WEIGHT: bold; FLOAT: left; BORDER-LEFT: #46719c 1px solid; WIDTH: 86px; CURSOR: pointer; COLOR: #46719c; LINE-HEIGHT: 23px; MARGIN-RIGHT: 2px; BORDER-BOTTOM: #46719c 0px solid; HEIGHT: 23px; TEXT-ALIGN: center
+}
+.fod DIV.s {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/fod_bg.gif) repeat-x left top; COLOR: #fff
+}
+.bdc91 {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 1px solid; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 1px solid
+}
+.bdc80d {
+	BORDER-RIGHT: #80b7dd 1px solid; BORDER-TOP: #80b7dd 1px solid; BORDER-LEFT: #80b7dd 1px solid; BORDER-BOTTOM: #80b7dd 1px solid
+}
+.tit_r_1 {
+	PADDING-LEFT: 26px; FONT-WEIGHT: bold; BACKGROUND: url(http://mat1.qq.com/finance/index910/ar3.gif) #cddfee no-repeat 9px 6px; COLOR: #039; BORDER-BOTTOM: #93b1d6 1px solid; HEIGHT: 24px
+}
+.tit_r_1 A {
+	COLOR: #039
+}
+.tit_r_1 A:hover {
+	COLOR: #f00
+}
+.tit_c_1 {
+	FONT-WEIGHT: bold; BACKGROUND: url(http://mat1.qq.com/finance/index910/tit_bg2.gif) repeat-x; COLOR: #039; HEIGHT: 26px
+}
+.tit_c_1 TD {
+	PADDING-LEFT: 29px; BACKGROUND: url(http://mat1.qq.com/finance/index910/ar4.gif) no-repeat 11px 9px
+}
+.tit_c_1 A {
+	COLOR: #039
+}
+.tit_c_1 A:hover {
+	COLOR: #f00
+}
+.img_bd {
+	BORDER-RIGHT: #8a8a8a 1px solid; BORDER-TOP: #8a8a8a 1px solid; BORDER-LEFT: #8a8a8a 1px solid; BORDER-BOTTOM: #8a8a8a 1px solid
+}
+.titinfo_r {
+	PADDING-RIGHT: 20px; COLOR: #fff; TEXT-ALIGN: right
+}
+.titinfo_r A {
+	PADDING-LEFT: 15px; BACKGROUND: url(http://mat1.qq.com/finance/index910/white_dot.gif) no-repeat left 4px; COLOR: #fff; MARGIN-RIGHT: 8px
+}
+.titinfo_r A:hover {
+	COLOR: #f00
+}
+.titinfo_r A.no {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #fff
+}
+.titinfo_r A.no:hover {
+	COLOR: #f00
+}
+.fc114 A {
+	COLOR: #114272
+}
+.fc114 A:hover {
+	COLOR: #f00
+}
+.lblues {
+	COLOR: #003399
+}
+A.lblues {
+	COLOR: #003399
+}
+A.lblues:link {
+	COLOR: #003399
+}
+A.lblues:visited {
+	COLOR: #003399
+}
+A.lblues:hover {
+	TEXT-DECORATION: underline
+}
+.lb_line {
+	COLOR: #003399; TEXT-DECORATION: underline
+}
+A.lb_line {
+	COLOR: #003399; TEXT-DECORATION: underline
+}
+A.lb_line:link {
+	COLOR: #003399; TEXT-DECORATION: underline
+}
+A.lb_line:visited {
+	COLOR: #003399; TEXT-DECORATION: underline
+}
+A.lb_line:hover {
+	COLOR: #ad210e; TEXT-DECORATION: underline
+}
+.lorange {
+	COLOR: #d03100
+}
+A.lorange {
+	COLOR: #d03100
+}
+A.lorange:link {
+	COLOR: #d03100
+}
+A.lorange:visited {
+	COLOR: #d03100
+}
+A.lorange:hover {
+	TEXT-DECORATION: underline
+}
+.f14 {
+	FONT-SIZE: 14px
+}
+.m3 {
+	MARGIN-TOP: 3px
+}
+.whitetxt {
+	MARGIN-TOP: 1px; FLOAT: right
+}
+.whitedot {
+	MARGIN-TOP: 1px; BACKGROUND: url(http://mat1.qq.com/finance/index910/white_dot.gif) no-repeat center 50%; FLOAT: right; WIDTH: 20px; HEIGHT: 18px
+}
+.lc_title {
+	PADDING-LEFT: 29px; BACKGROUND: url(http://mat1.qq.com/finance/index910/ar3.gif) no-repeat 11px 7px; BORDER-BOTTOM: #91b0d5 1px solid
+}
+.lc_table {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 1px solid; BACKGROUND: url(http://mat1.qq.com/finance/index910/show_bg.gif) repeat-x 50% top; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 0px solid
+}
+.lc_table_end {
+	BORDER-BOTTOM: #91b0d5 1px solid
+}
+.lc_title2 {
+	PADDING-LEFT: 29px; BACKGROUND: url(http://mat1.qq.com/finance/index910/ar_org.gif) no-repeat 11px 7px; BORDER-BOTTOM: #bdd0e6 1px solid
+}
+.lc_table2 {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 1px solid; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 1px solid
+}
+.lc_table3 {
+	BORDER-RIGHT: #91b0d5 0px solid; BORDER-TOP: #91b0d5 1px solid; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 1px solid
+}
+.inputs {
+	BORDER-RIGHT: #7f9db9 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #7f9db9 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 2px; MARGIN: 0px; BORDER-LEFT: #7f9db9 1px solid; LINE-HEIGHT: 14px; PADDING-TOP: 2px; BORDER-BOTTOM: #7f9db9 1px solid; HEIGHT: 14px
+}
+.lc_bor {
+	BORDER-RIGHT: #cddfee 1px solid; BORDER-TOP: #cddfee 1px solid; BORDER-LEFT: #cddfee 1px solid; BORDER-BOTTOM: #cddfee 1px solid
+}
+.lc_bor2 {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+.lc_bor3 {
+	BORDER-RIGHT: #95b7d3 2px solid; BORDER-TOP: #95b7d3 2px solid; BORDER-LEFT: #95b7d3 2px solid; BORDER-BOTTOM: #95b7d3 2px solid
+}
+.lc_line_dot {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/line_dot.gif) repeat-x 50% bottom
+}
+.lc_line_dot2 {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/line_dot2.gif) no-repeat center center
+}
+.lc_border {
+	BORDER-RIGHT: #93b1d6 1px solid; BORDER-TOP: #93b1d6 1px solid; BORDER-LEFT: #93b1d6 1px solid; BORDER-BOTTOM: #93b1d6 1px solid
+}
+.f_book {
+	BORDER-RIGHT: #91b0d5 1px solid; BORDER-TOP: #91b0d5 1px solid; BACKGROUND: url(http://mat1.qq.com/finance/index910/tit_bg6.gif) repeat-x 50% top; BORDER-LEFT: #91b0d5 1px solid; BORDER-BOTTOM: #91b0d5 0px solid
+}
+.f_book_bg {
+	BACKGROUND: url(http://mat1.qq.com/finance/index910/f_book_bg.gif) #fff repeat-x 50% top
+}
+.cooperate {
+	BORDER-RIGHT: #436e99 3px solid; BORDER-TOP: #436e99 3px solid; BORDER-LEFT: #436e99 0px solid; BORDER-BOTTOM: #436e99 3px solid
+}

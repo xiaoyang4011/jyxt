@@ -1,0 +1,30 @@
+package crds.lyb.web.form;
+
+import crds.pub.util.AbstractForm;
+
+public final class Formlyb extends AbstractForm {
+	
+	private static final long serialVersionUID = 1L;
+	String message_id;
+    public String getMessage_id() {
+		return message_id;
+	}
+	public void setMessage_id(String messageId) {
+		message_id = messageId;
+	}
+	public String getMessage_t() {
+		return message_t;
+	}
+	public void setMessage_t(String messageT) {
+		message_t = messageT;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	String message_t;	
+	String message;
+	
+}

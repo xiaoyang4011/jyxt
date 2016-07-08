@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";color:#666666;}
+.clear{clear:both;}
+
+/* tab */
+.tab{width:638px;height:283px;overflow:hidden;margin:50px auto 0 auto;}
+.tab .tab_pic ul{height:283px;width:999em;position:relative;}
+.tab .tab_pic ul li{float:left;}
+.tab .tab_pic ul li a{display:block;}
+.tab_pic{float:left;width:225px;height:283px;overflow:hidden;position:relative;}
+.tab_txt{float:right;width:413px;height:283px;overflow:hidden;position:relative;background:#faf9f9;}
+.tab .tab_pic .prev,.tab .tab_pic .next{display:block;width:31px;height:31px;float:right;margin:0 0 0 1px;overflow:hidden;cursor:pointer;background:url(../images/tab_btn.png);}
+.tab .tab_pic .next{background-position:31px 0px;}
+.tab .tab_txt ul{position:relative;}
+.tab .tab_txt ul li{width:393px;height:263px;padding:10px;float:left;}
+.tab_san{display:block;width:17px;height:34px;position:absolute;top:29px;right:0;}
+.btn_bg{width:225px;height:33px;display:block;position:absolute;left:0;bottom:0;z-index:1;background:#000;display:block;filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity:0.3;opacity: 0.3;}
+.btn_ct{width:225px;height:31px;padding:1px;display:block;position:absolute;left:0;bottom:0;z-index:2;}

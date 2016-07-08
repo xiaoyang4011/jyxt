@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 配置Form been  名字和路径-->	
+	<form-bean name="FormDepart" type="crds.basis.department.web.FormDepart" />		
+	<form-bean name="formSpeciality" type="crds.basis.speciality.web.form.FormSpeciality" />
+	<form-bean name="formClass" type="crds.basis.classa.web.form.AddClassForm" />		
+	</form-beans>
+	<!-- 配置action-mappings-->	
+		<action-mappings>	
+		
+		
+			
+					<!-- 浏览-->
+				<action path="/dep_browse" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="Department_Main" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/dep_bro.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+						<!-- 增加跳转页面-->
+				<action path="/dep_add_jump" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="addJump" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/dep_add.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+				<!-- 增加 -->
+				<action path="/dep_add" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="adddepart" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/Warning.jsp?id=3" />
+				<forward name="unsucc" path="/basis/department/Warning.jsp?id=4" />	<!-- 配置action返回界面-->	
+				</action>
+					<!-- 修改跳转-->
+				<action path="/dep_jump" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="updateJump" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/dep_update.jsp" /> <!-- 配置action返回界面-->	
+				</action>
+							<!-- 修改-->
+				<action path="/dep_del" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="delete" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/Warning.jsp?id=2" /> 
+				<forward name="fail" path="/basis/department/Warning.jsp?id=1" />	<!-- 配置action返回界面-->	
+				</action>
+				
+								<!-- 跳转-->
+				<action path="/spec_jump" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="spec_jump" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/specialty/spec_bro.jsp" /> 	<!-- 配置action返回界面-->	
+				</action>
+					 <!-- 部门查询 -->
+		<action path="/query1" type="crds.basis.speciality.web.action.ActionSpeciality"
+			name="formSpeciality" parameter="depart_query" scope="request">
+			<forward name="succ" path="/basis/speciality/specialitylist.jsp" />
+		</action>
+		<action path="/query2" type="crds.basis.speciality.web.action.ActionSpeciality"
+			name="formSpeciality" parameter="depart_spec" scope="request">
+			<forward name="succ" path="/basis/speciality/specialitylist_dep.jsp" />
+		</action>
+		
+		<!-- 专业查询列表-->
+		<action path="/speciality_query" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="speciality_query" scope="request">
+			<forward name="succ" path="/basis/speciality/specialitylist1.jsp" />
+		</action>
+		<!-- 部门专业查询列表-->
+		<action path="/speciality_query_dep" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="speciality_query_dep" scope="request">
+			<forward name="succ" path="/basis/speciality/specialitylist1_dep.jsp" />
+		</action>
+		<!-- 专业管理-->
+		<action path="/specialityadmin" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="specialityadmin" scope="request">
+			<forward name="succ" path="/basis/speciality/specialitylist.jsp" />
+		</action>
+		
+		<!-- 到专业添加页面-->
+		<action path="/speciality_add" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="speciality_add" scope="request">
+			<forward name="spec_add" path="/basis/speciality/specialityadd.jsp" />
+		</action>
+		<!-- 到系部的专业添加页面-->
+		<action path="/speciality_add_dep" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="speciality_add_dep" scope="request">
+			<forward name="spec_add" path="/basis/speciality/specialityadd_dep.jsp" />
+		</action>		
+		
+		<!-- 专业信息添加,然后返回专业列表页 -->
+		<action path="/addreturnlist" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="addreturnlist" scope="request">
+			<forward name="addreturnlist" path="/basis/speciality/specialityok.jsp?para=1" />
+		</action>
+		
+		<!-- 专业信息添加,然后返回专业添加页
+		<action path="/specialityadd" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="specialityadd" scope="request">
+			<forward name="add" path="/basis/speciality/specialityadd.jsp" />
+		</action>
+		-->
+			<!-- 专业信息添加后,-->
+		<action path="/specialityadd" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="specialityadd" scope="request">
+			  <forward name="succ" path="/basis/speciality/specialityok.jsp?para=1" />
+			<forward name="error" path="/basis/speciality/specialityadd.jsp" />
+		</action>
+		
+			<!-- 系部的专业信息添加后,-->
+		<action path="/specialityadd_dep" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="specialityadd" scope="request">
+			  <forward name="succ" path="/basis/speciality/specialityok.jsp?para=5" />
+			<forward name="error" path="/basis/speciality/specialityadd_dep.jsp" />
+		</action>		
+		 
+		 <!-- 到专业列表页-->
+		<action path="/spec_list" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="spec_list" scope="request">
+			<forward name="spec_list" path="/basis/speciality/specialitylist.jsp" />
+		</action>
+		  
+		 <!-- 从添加专业返回到专业列表页-->
+		<action path="/spec_list1" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="spec_list1" scope="request">
+			<forward name="spec_list1" path="/basis/speciality/specialitylist.jsp" />			
+		</action>
+		
+		 <!-- 从专业列表页到修改页-->
+		<action path="/updateSpeciality" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="updateSpeciality" scope="request">
+			<forward name="spec_update" path="/basis/speciality/specialityupdate0.jsp" />
+		</action>	
+		<!-- 从部门的专业列表页到修改页-->
+		<action path="/updateSpeciality_dep" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="updateSpeciality_dep" scope="request">
+			<forward name="spec_update" path="/basis/speciality/specialityupdate0_dep.jsp" />
+		</action>	 
+		
+		 <!-- 修改专业信息-->
+		<action path="/specialityupdatedo" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="specialityupdatedo" scope="request">
+		<forward name="updatedo" path="/basis/speciality/specialityok.jsp?para=2" />
+		<forward name="error" path="/basis/speciality/specialityupdate0.jsp" />
+		</action>
+			 <!-- 系部修改专业信息-->
+		<action path="/specialityupdatedo_dep" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="specialityupdatedo" scope="request">
+		<forward name="updatedo" path="/basis/speciality/specialityok.jsp?para=6" />
+		<forward name="error" path="/basis/speciality/specialityupdate0_dep.jsp" />
+		</action>  
+		  <!-- 从 专业列表页删除一条专业信息-->
+		<action path="/deleteSpeciality" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="deleteSpeciality" scope="request">
+			<forward name="delete" path="/basis/speciality/specialityok.jsp?para=3" />
+			<forward name="deletefail" path="/basis/speciality/specialityok.jsp?para=4" />			
+		</action> 
+		
+		<action path="/spec_querynew" type="crds.basis.speciality.web.action.ActionSpeciality"
+			  name="formSpeciality" parameter="speciality_query2" scope="request">
+			<forward name="succ" path="/basis/speciality/specialitylist1.jsp" />
+		</action>
+				
+					<!-- 班级 配置 -->
+
+		<!-- 连接 -->
+		<action type="crds.basis.classa.web.action.ActionClass"
+			name="formClass" scope="request" parameter="Class" path="/Class">
+			<forward name="succ" path="/basis/class/Class.jsp" />
+		</action>
+		<!-- 显示班级 -->
+		<action type="crds.basis.classa.web.action.ActionClass"
+			name="formStud" scope="request" parameter="addClass" path="/addClass">
+			<forward name="succ" path="/basis/class/AddClass.jsp" />
+		</action>
+		<!-- 添加班级 -->
+		<action type="crds.basis.classa.web.action.ActionClass"
+			name="formClass" scope="request" parameter="addClassForm" path="/addClassForm">
+			<forward name="succ" path="/Class.do" />
+			<forward name="ansucc" path="/basis/class/AddClass.jsp" />
+		</action>
+		<!-- 删除班级-->
+		<action type="crds.basis.classa.web.action.ActionClass"
+			name="formClass" scope="request" parameter="delete" path="/delete">
+			<forward name="succ" path="/basis/class/Class.jsp" />
+		</action>
+		<!-- 班级 修改-->
+		<action type="crds.basis.classa.web.action.ActionClass"
+			name="formClass" scope="request" parameter="updateClassdo" path="/UpdateClasssucc">
+			<forward name="succ" path="/basis/class/UpdateClass.jsp" />
+			<forward name="update" path="/basis/class/Class.jsp" />
+		</action>
+		<!-- 班级修改保存-->
+		<action type="crds.basis.classa.web.action.ActionClass"
+			name="formClass" scope="request" parameter="updateClassdojsp" path="/UpdateClass">
+			<forward name="update" path="/basis/class/UpdateClass.jsp" />
+		</action>
+		<!-- 删除多条课程记录 -->
+		<action type="crds.basis.classa.web.action.ActionClass"
+			scope="request" parameter="deleteAll" path="deleteall">
+			<forward name="deleteall" path="/Class.do" />
+		</action>
+				
+				
+		</action-mappings>
+</struts-config>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 配置Form been  名字和路径-->	
+	<form-bean name="FormZs" type="crds.zhaosheng.web.form.FormZs" />		
+	</form-beans>
+	<!-- 配置action-mappings-->	
+		<action-mappings>	
+
+				<action path="/bro_stud" type="crds.zhaosheng.web.action.ActionZs" 
+						name="FormZs" parameter="BroStud" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/zhaosheng/stud_list.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+						<!-- 浏览-->
+				<action path="/bro_cy_zs" type="crds.zhaosheng.web.action.ActionZs" 
+						name="FormZs" parameter="BroCompany" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/zhaosheng/company_list.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+					<!-- 增加单位-->
+					<action path="/add_company" type="crds.zhaosheng.web.action.ActionZs" 
+						name="FormZs" parameter="Update_jiuye" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/zhaosheng/Warning.jsp?id=5" />
+				<forward name="fail" path="/zhaosheng/Warning.jsp?id=6" />	<!-- 配置action返回界面-->	
+				</action>
+						<!-- 取消就业单位-->
+					<action path="/del_company" type="crds.zhaosheng.web.action.ActionZs" 
+						name="FormZs" parameter="del_jiuye" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/zhaosheng/Warning.jsp?id=5" />	
+				<forward name="fail" path="/zhaosheng/Warning.jsp?id=6" /><!-- 配置action返回界面-->	
+				</action>
+			
+				
+		</action-mappings>
+</struts-config>

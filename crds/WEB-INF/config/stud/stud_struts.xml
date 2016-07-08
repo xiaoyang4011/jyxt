@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 学生 -->
+		<form-bean name="formStud" type="crds.stud.web.form.FormStud" />
+		<form-bean name="formLoad" type="crds.personalSpace.myUpload.web.form.FormMyUpload" />	
+		<form-bean name="formDownLoad" type="crds.personalSpace.myDownload.web.form.FormMyDownload" />	
+		<form-bean name="formBrowse" type="crds.personalSpace.myBrowse.web.form.FormMyBrowse" />	
+		<form-bean name="formModify" type="crds.personalSpace.myModify.web.form.FormMyModify" />	
+	</form-beans>
+	<action-mappings>
+	
+		<!-- 学生 -->
+		<action path="/studentPage" type="crds.stud.web.action.ActionStud"
+			name="formStud" parameter="studentPage" scope="request">
+			<forward name="succ" path="/stud/studentpage.jsp" />
+		</action>
+		
+		<!-- 学生 信息-->
+		<action path="/studentInfo" type="crds.stud.web.action.ActionStud"
+			name="formStud" parameter="studentInfo" scope="request">
+			<forward name="succ" path="/stud/studentinfo.jsp" />
+		</action>
+		<!-- 跳转到显示 -->
+		<action path="/jump" type="crds.stud.web.action.ActionStud"
+		name="formStud" parameter="jump" scope="request">
+		<forward name="succ" path="/sublib/basic/showsub.jsp"></forward>
+		</action>
+		<!--跳转到添加-->
+		<action path="/jump2" type="crds.stud.web.action.ActionStud"
+		 parameter="jump2" scope="request">
+		<forward name="succ" path="/sublib/basic/addsublib.jsp"></forward>
+		</action>
+		<!--添加-->
+		<action path="/addsub" type="crds.stud.web.action.ActionStud"
+		name="formStud"  parameter="addsub" scope="request">
+		<forward name="succ" path="/test.do" />
+		<forward name="fail" path="/sublib/basic/addsublib.jsp" />
+		</action>
+		<!-- 删除 -->
+		<action path="/delsub" type="crds.stud.web.action.ActionStud" name="formStud" parameter="delsub" scope="request">
+		<forward name="succ" path="/test.do" />
+		<forward name="fail" path="/sublib/basic/fail.jsp" />		
+		</action>
+		<!-- 修改前的跳转 -->
+		<action path="/jump3" type="crds.stud.web.action.ActionStud" name="formStud" parameter="jump3" scope="request">
+		<forward name="succ" path="/sublib/basic/altersub.jsp"/>
+		</action>
+		<!-- 开始修改 -->
+		<action path="/altersub" type="crds.stud.web.action.ActionStud" name="formStud" parameter="altersub" scope="request">
+		<forward name="succ" path="/test.do"/>
+		<forward name="fail" path="/sublib/basic/altersub.jsp"/>
+		</action>
+		<!-- 条件显示 -->
+		<action path="/selectA" type="crds.stud.web.action.ActionStud" name="formStud" parameter="jump3" scope="request">
+		<forward name="succ" path="/sublib/basic/showsub1.jsp"/>
+		<forward name="fail" path="/sublib/basic/fail.jsp"/>
+		</action>
+		<!-- 分页test -->
+		<action path="/jump4" type="crds.stud.web.action.ActionStud"
+		name="formStud" parameter="jump4" scope="request">
+		<forward name="succ" path="/sublib/basic/showsub1.jsp"></forward>
+		</action>
+		<!-- test.do -->
+		<action path="/test" type="crds.stud.web.action.ActionStud"
+			name="formStud" parameter="test" scope="request">
+			<forward name="succ" path="/sublib/basic/showsub.jsp" />
+		</action>
+		<!-- MyUpload -->
+		<action path="/MyUpload" type="crds.personalSpace.myUpload.web.action.MyUploadAction"
+			name="formLoad" parameter="MyUpload" scope="request">
+			<forward name="succ" path="/personalSpace/myUpload/myUpload.jsp" />
+		</action>
+		<!-- MyDownload -->
+		<action path="/MyDownload" type="crds.personalSpace.myDownload.web.action.MyDownloadAction"
+			name="formDownLoad" parameter="MyDownload" scope="request">
+			<forward name="succ" path="/personalSpace/myDownload/myDownload.jsp" />
+		</action>
+		<!-- MyBrowse -->
+		<action path="/MyBrowse" type="crds.personalSpace.myBrowse.web.action.MyBrowseAction"
+			name="formBrowse" parameter="MyBrowse" scope="request">
+			<forward name="succ" path="/personalSpace/myBrowse/myBrowse.jsp" />
+		</action>
+		<!-- MyModify -->
+		<action path="/MyModify" type="crds.personalSpace.myModify.web.action.MyModifyAction"
+			name="formModify" parameter="MyModify" scope="request">
+			<forward name="succ" path="/personalSpace/myModify/myModify.jsp" />
+		</action>
+		
+		
+		
+		
+
+	</action-mappings>
+</struts-config>

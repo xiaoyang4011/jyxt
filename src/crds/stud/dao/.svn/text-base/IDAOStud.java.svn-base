@@ -1,0 +1,51 @@
+/**
+ * product name :CRDS
+ */
+package crds.stud.dao;
+
+import java.util.List;
+
+import crds.stud.web.form.FormStud;
+
+
+/**
+ * 
+ *
+ * @version : 1.0
+ * @author : maogf
+ * @date : May 5, 2009 3:27:45 PM
+ * @email : maogenfeng@gmail.com
+ */
+public interface IDAOStud {
+	
+	
+	
+	
+	
+	@SuppressWarnings("unchecked")
+	public List  queryTest( )throws Exception ;
+	
+	/**
+	@SuppressWarnings("unchecked")
+	public List  queryTest2(String companyName )throws Exception;
+	*/
+	
+	
+	/** ��ȡѧ����Ϣ*/
+	@SuppressWarnings("unchecked")
+	public List  studentInfo(FormStud formstud) throws Exception;
+	public List  subinfo() throws Exception;
+
+	public boolean addinfo(FormStud addform) throws Exception;
+	public boolean delinfo(int id) throws Exception;
+	public List getalterList(int id) throws Exception;
+	//public List getselectList(int id) throws Exception;
+	public boolean alterinfo(FormStud alterform) throws Exception;
+	public List Student_query(FormStud formstud) throws Exception;
+	public List Student_query1(FormStud formstud) throws Exception;
+	public List getspeclist() throws Exception;
+	public List getreslist() throws Exception;
+	public boolean checkUserExists(FormStud formstud) throws Exception ;
+}
+
+

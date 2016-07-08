@@ -1,0 +1,2 @@
+重新显示 今天 更新 确定:  将config.js里的<div id=dpControl  style='display:none'>去掉
+初始化开始时候的多个是否显示:WdatePicker.js里设置

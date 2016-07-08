@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  
+  
+	<form-beans>
+		
+		<!-- 
+		<form-bean name="formStud" type="crds.stud.web.form.FormStud" />
+		 -->
+		 <!-- 添加信息adduserForm -->
+		 <form-bean name="adduserForm" type="crds.system.user.web.form.AddUser"></form-bean>
+		 
+				
+	</form-beans>
+	<action-mappings>
+	
+		<!-- 查询全部用户信息-->
+		<action path="/userindoPage" type="crds.system.user.web.action.useraction"
+			name="formStud" parameter="usershowPage" scope="request">
+			 <forward name="succ" path="/system/user/usershow.jsp" /> 
+			<!--<forward name="succ" path="/system/user/testusershow.jsp" />-->
+		</action>
+		
+		
+		
+		<!-- 添加用户 -->
+		
+		<action path="/addUser" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="addUser" scope="request">
+			<!-- <forward name="true" path="/system/user/ok.jsp" /> -->
+			<forward name="true" path="/userindoPage.do" />
+			<forward name="flase" path="/system/user/addUser.jsp" />
+		</action>
+	
+	   <!-- 添加用户页面 -->
+		
+		<action path="/addUserPackage" type="crds.system.user.web.action.useraction"
+		    parameter="addUserPage" scope="request">
+			
+			<forward name="addUserpage" path="/system/user/addUser.jsp" />
+			
+		</action>
+		
+		
+		
+		<!-- 删除用户 -->
+		
+		<action path="/delete" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="deleteUser" scope="request">
+			<!-- <forward name="true" path="/system/user/ok.jsp" /> -->
+			<forward name="true" path="/userindoPage.do" />
+			<forward name="flase" path="/system/user/no.jsp" />
+		</action>
+		
+		<!-- 按条件查询用户 -->
+		<action path="/selectUser" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="selectUser" scope="request">
+			<!-- <forward name="true" path="/system/user/ok.jsp" /> -->
+			<forward name="succ" path="/system/user/usershow.jsp"/>
+		</action>
+		
+		<!-- maogenfeng end -->
+		
+		
+		<!-- 修改 前的准备数据-->
+		
+		<action path="/update" type="crds.system.user.web.action.useraction"
+			name="adduserForm" parameter="updateUser" scope="request">
+			 <forward name="update" path="/system/user/updateUser.jsp" /> 
+		</action>
+		
+		<!-- 执行修改操作 -->
+		<action path="/updatePackage" type="crds.system.user.web.action.useraction"
+		    name="adduserForm" parameter="updatePackage" scope="request">
+			
+			<forward name="updatePackage" path="/userindoPage.do" />
+			
+			<forward name="updatePackageNO" path="/update.do" />
+		</action>
+		
+		
+	</action-mappings>
+</struts-config>

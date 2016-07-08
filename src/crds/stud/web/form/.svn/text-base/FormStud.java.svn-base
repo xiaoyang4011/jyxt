@@ -1,0 +1,102 @@
+/**
+ * product name :media
+ */
+package crds.stud.web.form;
+
+import java.awt.image.BufferedImage;
+import java.util.LinkedHashMap;
+
+import crds.pub.util.AbstractForm;
+
+/**
+ * 
+ * @specification :趋势分析Form
+ * @version : 1.0
+ * @author : maogf
+ * @date : May 11, 2009 5:20:05 PM
+ * @email : maogenfeng@gmail.com
+ */
+public final class FormStud extends AbstractForm{
+
+	/**
+	 * @field : serialVersionUID
+	 * @fieldType : long
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 关键指标属�?
+	 */
+	// �?��企业
+	private int sublib_id;
+	private String restype_id;
+	private String restype_name;
+	private String spec_code;
+	private String sublib_code;
+	private String sublib_title;
+	private int sublib_state;
+	private int sublibid;
+	String ID;
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
+	String name;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setSublib_id(int sublib_id) {
+		this.sublib_id = sublib_id;
+	}
+	public int getSublib_id() {
+		return sublib_id;
+	}
+	public void setRestype_id(String restype_id) {
+		this.restype_id = restype_id;
+	}
+	public String getRestype_id() {
+		return restype_id;
+	}
+	public void setSpec_code(String spec_code) {
+		this.spec_code = spec_code;
+	}
+	public String getSpec_code() {
+		return spec_code;
+	}
+	public void setSublib_code(String sublib_code) {
+		this.sublib_code = sublib_code;
+	}
+	public String getSublib_code() {
+		return sublib_code;
+	}
+	public void setSublib_title(String sublib_title) {
+		this.sublib_title = sublib_title;
+	}
+	public String getSublib_title() {
+		return sublib_title;
+	}
+	public void setSublib_state(int sublib_state) {
+		this.sublib_state = sublib_state;
+	}
+	public int getSublib_state() {
+		return sublib_state;
+	}
+	public void setSublibid(int sublibid) {
+		this.sublibid = sublibid;
+	}
+	public int getSublibid() {
+		return sublibid;
+	}
+	public void setRestype_name(String restype_name) {
+		this.restype_name = restype_name;
+	}
+	public String getRestype_name() {
+		return restype_name;
+	}
+	
+	
+}

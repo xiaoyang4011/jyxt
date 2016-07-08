@@ -1,0 +1,200 @@
+/**
+ * product name :CRDS
+ */
+package crds.stud.dao.impl;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import crds.stud.dao.IDAOStud;
+import crds.stud.web.action.ActionStud;
+import crds.stud.web.form.FormStud;
+import crds.pub.util.JdbcTemplateExtend;
+
+/**
+ * 
+ * @specification :登录操作DAO实现
+ * @version : 1.0
+ * @author : maogf
+ * @date : Apr 29, 2009 3:14:17 PM
+ * @email : maogenfeng@gmail.com
+ */
+public class DAOStud implements IDAOStud {
+	// 重写的JdbcTemplateExtend
+	private JdbcTemplateExtend jdbcTemplate;
+
+	public void setJdbcTemplate(JdbcTemplateExtend jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List queryTest() throws Exception {
+		String sql = "select top 10 company_code,company_name from company_basic_info";
+		List list = jdbcTemplate.queryForList(sql);
+		return list;
+	}
+
+	/** ��ȡѧ����Ϣ */
+	@SuppressWarnings("unchecked")
+	public List studentInfo(FormStud formstud) throws Exception {
+		StringBuffer countsql = new StringBuffer();
+		StringBuffer sql = new StringBuffer();
+		countsql = new StringBuffer("select count(*) from usertest");
+		sql = new StringBuffer("select * from usertest ");
+
+		formstud.setRowsCount(jdbcTemplate.queryForInt(countsql.toString()));
+		return jdbcTemplate.queryForListPage(sql.toString(), formstud
+				.getStartPosition(), formstud.getRowsPerPage());
+	}
+
+	// 显示全部~
+	public List subinfo() throws Exception {
+		// TODO Auto-generated method stubsublib_id
+
+		String sql = "select sublib_id,resource_type.restype_name,spec_code,sublib_code,sublib_title,sublib_state from sublibrary,resource_type where sublibrary.restype_id=resource_type.restype_id order by sublib_id asc";
+		List list = jdbcTemplate.queryForList(sql);
+		return list;
+	}
+
+	// 添加
+	public boolean addinfo(FormStud addform) throws Exception {
+		// TODO Auto-generated method stub
+		String restype_id=addform.getRestype_id();
+		String spec_code=addform.getSpec_code();
+		String sublib_code=addform.getSublib_code();
+		String sublib_title=addform.getSublib_title();
+		int sublib_state=addform.getSublib_state();
+		StringBuffer  sql = new StringBuffer();
+    	List params = new ArrayList();//参数
+		sql = new StringBuffer("insert into sublibrary(restype_id,spec_code,sublib_code,sublib_title,sublib_state) values(?,?,?,?,?)");
+		params.add(restype_id);
+    	params.add(spec_code);
+    	params.add(sublib_code.trim());
+    	params.add(sublib_title.trim());
+    	params.add(sublib_state);
+    	int re=jdbcTemplate.insertToDB(sql.toString(), params.toArray());
+    	if(re>0){
+    	return true;}
+    	else{
+    		return false;
+    	}
+	}
+
+	// 删除
+	public boolean delinfo(int id) throws Exception {
+		// TODO Auto-generated method stub
+		String sql = "delete from sublibrary where sublib_id='" + id + "'";
+
+		int i = jdbcTemplate.update(sql);
+		if (i == 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// 返回修改填充列表
+	public List getalterList(int id) throws Exception {
+		// TODO Auto-generated method stub
+		String sql = "select * from sublibrary,resource_type where sublibrary.restype_id=resource_type.restype_id and sublib_id='"
+				+ id + "' order by sublib_id asc";
+		List list = jdbcTemplate.queryForList(sql);
+		return list;
+
+	}
+//修改
+	public boolean alterinfo(FormStud alterform) throws Exception {
+		// TODO Auto-generated method stub
+		String restype_id=alterform.getRestype_id();
+		String spec_code=alterform.getSpec_code();
+		String sublib_code=alterform.getSublib_code();
+		String sublib_title=alterform.getSublib_title();
+		int sublib_state=alterform.getSublib_state();
+		int sublib_id=alterform.getSublib_id();
+		StringBuffer  sql = new StringBuffer();
+    	List params = new ArrayList();//参数
+		sql = new StringBuffer("update sublibrary set restype_id=?,spec_code=?,sublib_code=?,sublib_title=?,sublib_state=? where sublib_id=?");
+		params.add(restype_id);
+    	params.add(spec_code);
+    	params.add(sublib_code.trim());
+    	params.add(sublib_title.trim());
+    	params.add(sublib_state);
+    	params.add(sublib_id);
+    	int re=jdbcTemplate.insertToDB(sql.toString(), params.toArray());
+    	if(re>0){
+    	return true;}
+    	else{
+    		return false;
+    	}
+	}
+//按条件查询
+	public List Student_query(FormStud formstud) throws Exception {
+		// TODO Auto-generated method stub
+		int dep_code = formstud.getSublib_id(); // 部门编号
+
+		StringBuffer countsql = new StringBuffer();
+		StringBuffer sql = new StringBuffer();
+
+		if (dep_code==0) {
+			countsql = new StringBuffer("select count(*) from sublibrary");
+			sql = new StringBuffer("select *,case sublib_state when 1 then '开放' when 0 then '关闭' end as sublib_states from sublibrary,resource_type,specialty where sublibrary.spec_code=specialty.spec_code and sublibrary.restype_id=resource_type.restype_id order by sublib_id asc");
+		} else {
+			countsql = new StringBuffer(
+					"select count(*) from sublibrary where sublib_id='"
+							+ dep_code + "'");
+			sql = new StringBuffer("select *,case sublib_state when 1 then '开放' when 0 then '关闭' end as sublib_states from sublibrary,resource_type,specialty where sublibrary.spec_code=specialty.spec_code and sublibrary.restype_id=resource_type.restype_id and sublib_id='"
+							+ dep_code + "'");
+		}
+		formstud.setRowsCount(jdbcTemplate.queryForInt(countsql.toString()));
+		return jdbcTemplate.queryForListPage(sql.toString(), formstud
+				.getStartPosition(), formstud.getRowsPerPage());
+	}
+//分页全部查询~	
+	public List Student_query1(FormStud formstud) throws Exception {
+		// TODO Auto-generated method stub
+		StringBuffer countsql = new StringBuffer();
+		StringBuffer sql = new StringBuffer();
+		countsql = new StringBuffer("select count(*) from sublibrary");
+		sql = new StringBuffer(
+				"select *,case sublib_state when 1 then '开放' when 0 then '关闭' end as sublib_states from sublibrary,resource_type,specialty where sublibrary.spec_code=specialty.spec_code and sublibrary.restype_id=resource_type.restype_id order by sublib_id asc");
+
+		formstud.setRowsCount(jdbcTemplate.queryForInt(countsql.toString()));
+		return jdbcTemplate.queryForListPage(sql.toString(), formstud
+				.getStartPosition(), formstud.getRowsPerPage());
+	}
+//获取资源列表
+	public List getreslist() throws Exception {
+		// TODO Auto-generated method stub
+
+		String sql = "select * from resource_type";
+		List list = jdbcTemplate.queryForList(sql);
+		return list;
+	}
+//获取专业列表
+	public List getspeclist() throws Exception {
+		// TODO Auto-generated method stub
+		String sql = "select * from specialty";
+		List list = jdbcTemplate.queryForList(sql);
+		return list;
+	}
+//检查唯一性
+	public boolean checkUserExists(FormStud formstud) throws Exception {
+		// TODO Auto-generated method stub
+		StringBuffer sql=new StringBuffer(32);
+		sql.append("select count(*) from sublibrary where sublib_code=? ");
+		List params = new ArrayList();
+		params.add(formstud.getSublib_code());
+		int re=jdbcTemplate.queryForInt(sql.toString(),params.toArray());	
+		if(re>0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+}

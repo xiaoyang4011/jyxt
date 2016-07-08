@@ -1,0 +1,179 @@
+	body {
+		background:#ffffff;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+		font-family:"Microsoft YaHei", "SimHei", "SimSun", Arial, Helvetica, sans-serif;
+ }
+/* #Base 960 Grid
+================================================== */
+
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding:0; }
+    .container .column,
+    .container .columns                         { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+	.container .columns_out                         { float: left; display: inline; margin-left: 0px; }
+    .row                                        { margin-bottom: 20px; }
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+
+    /* Base Grid */
+    .container .one.column,
+    .container .one.columns                     { width: 40px;  }
+    .container .two.columns                     { width: 100px; }
+    .container .three.columns                   { width: 160px; }
+    .container .four.columns                    { width: 220px; }
+    .container .five.columns                    { width: 280px; }
+    .container .six.columns                     { width: 300px; }
+    .container .seven.columns                   { width: 400px; }
+    .container .seven2.columns                   { width: 430px; }
+    .container .eight.columns                   { width: 460px; }
+    .container .nine.columns                    { width: 520px; }
+    .container .ten.columns                     { width: 620px; }
+    .container .eleven.columns                  { width: 640px; }
+    .container .twelve.columns                  { width: 700px; }
+    .container .twelve2.columns                  { width: 720px; }
+    .container .thirteen.columns                { width: 760px; }
+    .container .fourteen.columns                { width: 820px; }
+    .container .fifteen.columns                 { width: 880px; }
+    .container .sixteen.columns                 { width: 940px; }
+
+    .container .one-third.column                { width: 300px; }
+    .container .two-thirds.column               { width: 620px; }
+	.si                     { position: relative; width: 100%; background: #f7f7f7 url(../images/slider/sbg.jpg);margin: 0 auto; padding:0; }
+ /* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+ 
+ 
+.slider {
+	margin: 0px 0px 10px 0px;
+	position: relative;
+}
+
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.rslides li {
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.rslides img {
+	display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+	max-height: 347px;
+}
+
+a.rslides_nav {
+	position: absolute;
+	z-index: 200;
+	top: 45%;
+}
+
+a.rslides_nav.next {
+	background: #322e39;
+	display: block;
+	padding: 12px;
+	color: #ffffff;
+	font-size: 12px;
+	right: 0;
+}
+
+a.rslides_nav.prev {
+	background: #322e39;
+	display: block;
+	padding: 12px;
+	color: #ffffff;
+	font-size: 12px;
+	left: 0;
+}
+
+ul.rslides_tabs {
+	background: url(../images/slider/sbg2.jpg) no-repeat;
+	background-position:center;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	height: 10px;
+}
+
+ul.rslides_tabs li {
+	display: inline-block;
+	background: none;
+	width: 10%;
+	height: 10px;
+	padding: 0px;
+	margin: 0px 1px 0px 0px;
+	vertical-align: top;
+}
+
+ul.rslides_tabs li a {
+	display: block;
+	padding: 0px;
+	background: #5c5a5e;
+	margin: 0px;
+	height: 10px;
+	line-height: 0px;
+	text-indent: -9999px;
+}
+
+ul.rslides_tabs li.rslides_here a {
+	text-indent: -9999px;
+	background: #1364be;
+	padding: 0px;
+	margin: 0px;
+	height: 10px;
+	display: block;
+	line-height: 1px;
+}

@@ -1,0 +1,7 @@
+.crdsTabsUl {margin: 0px; padding: 0px;}
+.crdsTabsUlLi {position: relative; height:20px; vertical-align:bottom; float: left; text-align:center; padding: 3px 1px 1px 1px; margin: 0px; font: bold 1em sans-serif; color:#5b5b5b; background: #e8e8e8 url(../images/lablenormal.gif) repeat-x left bottom; list-style: none; border:solid 1px #cacaca; -moz-user-select: none; -khtml-user-select: none; cursor: pointer;}
+.crdsTabsUlLi A{text-decoration: none;vertical-align: middle;}
+.crdsTabsUlLiSelect {color:#b8161c; background: #f2f2f2 url(../images/lableselect.gif) repeat-x left bottom; border-bottom: 1px solid #cacaca;}
+.crdsTabPanels {margin: 0px; padding: 0px; float: left; clear: none; width: 100%;}
+.crdsTabsContentGroup {clear: both; border-left: solid 1px #CCC; border-bottom: solid 1px #CCC; border-top: solid 1px #cacaca; border-right: solid 1px #cacaca; background-color: #EEE;}
+.crdsTabsContent {padding: 0px;}

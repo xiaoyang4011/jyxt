@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" 
+    "http://getahead.org/dwr//dwr20.dtd">
+
+<dwr>
+	<!-- init is only needed if you are extending DWR -->
+	<init>
+	</init>
+
+	<!-- without allow, DWR isn't allowed to do anything -->
+	<allow>
+		<!-- 组合管理——集团户定义、查询、修改、删除 -->
+		<create creator="spring" javascript="DWRGroup">
+			<param name="beanName" value="GroupDWR" />
+			<include method="queryCompanyInfoView" />
+			<include method="groupDefiniInfoStorage" />
+        </create>
+        <convert converter="bean" match="crds.combination.groupDefini.web.form.FormCombinationGroupDefini">
+			<param name="include" value="company_code,company_name,group_code" />
+		</convert>
+		
+		 <!-- 组合管理——编辑查询服务 --><!-- 组合管理——查询、新增、删除 -->
+		<create creator="spring" javascript="DWRCombi">
+			<param name="beanName" value="EditCombiDWR" />
+			<include method="queryCompanyInfoView" />
+			<include method="add_combinaInfoViewTX" />
+			<include method="del_CombinaInfo_ViewTX" />
+        </create>
+        <convert converter="bean" match="crds.combination.editCombi.web.form.FormCombinationEditCombi">
+			<param name="include" value="company_code,c_company_name,flag,combination_code" />
+		</convert>
+        <create creator="spring" javascript="DWRAction">
+            <param name="beanName" value="actionDWR"/>
+            <include method="getUserName"/>
+            <include method="getIndustryClassName"/>
+            <include method="sessionIsOverTime"/>
+            <include method="isAppointCompanyCode"/>
+            <include method="setDebtRatDimensionValidity"/>
+            <include method="getUserBasicRoleList"/>
+            <include method="roleUserIsHaveFlow"/>
+            <include method="getBraRaing"/>
+            <include method="delUploadFile"/>
+            <include method="posCompanyAnalystUserId"/>
+            <include method="switchCompany"/>
+            <include method="revocation"/>
+        </create>
+		<convert converter="bean" match="crds.system.templateManage.web.form.FormTemplateManage">
+			<param name="include" value="bra_rating,ul_index,pd_oneyear" />
+		</convert>
+        <!-- 财务报表 -->
+        <create creator="spring" javascript="DWRfinanState">
+            <param name="beanName" value="finanStateDWR" />
+            <include method="addFinanStateVali" />
+        </create>
+        <!-- 财务预测 -->
+        <create creator="spring" javascript="DWRfinanFore">
+            <param name="beanName" value="finanForeDWR" />
+            <include method="finanForeVali" />
+        </create>
+		
+		<!-- 基本信息、备忘录的管理  -->
+		<create creator="spring" javascript="DWRmemoManager">
+			<param name="beanName" value="MemoInfomanagerDWR" />
+			<include method="addMemoInfoView" />
+        </create>
+		<convert converter="bean" match="crds.home.add.web.form.FormCompanyBasicInfo">
+			<param name="include" value="flag,memo_date,memo_text" />
+		</convert>
+		
+		<!-- 信用评级 -->
+		<!-- add by ljy LuGuohui on 2008.09.26 -->
+        <create creator="spring" javascript="BOCompanyRate">
+        	<param name="beanName" value="BOCompanyRate"/>
+        </create>
+        <create creator="spring" javascript="DWREvaluation">
+			<param name="beanName" value="EvaluationDWR" />
+        </create>
+        
+        <create creator="spring" javascript="BOTempNoFinance">
+        	<param name="beanName" value="BOTempNoFinance"/>
+        </create>
+		<create creator="spring" javascript="BORiskIntExt">
+        	<param name="beanName" value="BORiskIntExt"/>
+        </create>
+      	<create creator="spring" javascript="BOTempFinance">
+        	<param name="beanName" value="BOTempFinance"/>
+        </create>
+        <create creator="spring" javascript="BOTempSupport">
+        	<param name="beanName" value="BOTempSupport"/>
+        </create>
+        <create creator="spring" javascript="BORatMainInfo">
+        	<param name="beanName" value="BORatMainInfo"/>
+        </create> 
+		<create creator="spring" javascript="BOFlowInfo">
+        	<param name="beanName" value="BOFlowInfo"/>
+        </create>
+         <create creator="spring" javascript="BODebtInfo">
+        	<param name="beanName" value="BODebtInfo"/>
+        </create>       
+        <create creator="spring" javascript="BOoperationlog">
+        	<param name="beanName" value="BOoperationlog"/>
+        </create>  
+		<create creator="spring" javascript="BOPawnInfo">
+        	<param name="beanName" value="BOPawnInfo"/>
+        </create>
+        <create creator="spring" javascript="CommonMethod">
+        	<param name="beanName" value="commonMethod"/>
+        </create> 
+        <convert converter="bean" match="crds.evaluation.evaluation.web.form.FormRatingTemplate"/>
+        <convert converter="bean" match="crds.evaluation.evaluation.web.form.FormTempNoFinanceVal"/>        
+        <convert converter="bean" match="org.apache.struts.action.ActionServletWrapper"/>
+        <convert converter="bean" match="crds.evaluation.evaluation.web.form.FormPawnType"/>
+	</allow>
+
+	<!-- you may need to tell DWR about method signatures -->
+	<signatures></signatures>
+
+</dwr>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<!-- 配置Form been  名字和路径-->	
+	<form-bean name="FormDepart" type="crds.basis.department.web.FormDepart" />		
+	</form-beans>
+	<!-- 配置action-mappings-->	
+		<action-mappings>	
+		
+		
+			
+					<!-- 浏览-->
+				<action path="/dep_browse" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="Department_Main" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/dep_bro.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+						<!-- 增加跳转页面-->
+				<action path="/dep_add_jump" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="addJump" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/dep_add.jsp" />	<!-- 配置action返回界面-->	
+				</action>
+				<!-- 增加 -->
+				<action path="/dep_add" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="adddepart" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/Warning.jsp?id=3" />
+				<forward name="unsucc" path="/basis/department/Warning.jsp?id=4" />	<!-- 配置action返回界面-->	
+				</action>
+					<!-- 修改跳转-->
+				<action path="/dep_jump" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="updateJump" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/dep_update.jsp" /> <!-- 配置action返回界面-->	
+				</action>
+							<!-- 修改-->
+				<action path="/dep_del" type="crds.basis.department.web.ActionDepart" 
+						name="FormDepart" parameter="delete" scope="request"><!-- 配置Form action执行名称-->	
+				<forward name="succ" path="/basis/department/Warning.jsp?id=2" /> 
+				<forward name="fail" path="/basis/department/Warning.jsp?id=1" />	<!-- 配置action返回界面-->	
+				</action>
+				
+				
+				
+		</action-mappings>
+</struts-config>

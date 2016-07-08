@@ -1,0 +1,462 @@
+.calendar_td{
+	FONT-SIZE: 12px;
+	BACKGROUND: #fff9d7; 
+	COLOR: #000000
+}
+.c {
+	FONT-SIZE: 12px
+}
+#canlendar_content1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 206px; PADDING-TOP: 0px
+}
+.topline {
+	BORDER-TOP: #ddd 1px solid; BACKGROUND: white
+}
+INPUT.cbtn {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BACKGROUND: #eee; BORDER-LEFT: medium none; CURSOR: pointer; BORDER-BOTTOM: medium none
+}
+body, td, th {
+	font-family: "宋体";
+	font-size: 16px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+.style1 {
+	color: #0071bc;
+	font-weight:600;
+}
+.a_fontstyle {
+	color: #0071bc;
+}
+.a_redstyle {
+	color: red;
+}
+.position {
+	color: #0071bc;
+	font-weight:600;
+	height:25px;
+	background:url("title_bg.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/images/title_bg.gif*/; 
+}
+ul{margin:5px;padding:0px;}
+.dotted_line {border-bottom:#CCC dotted 1px; margin-top:5px;display: inline-block; margin-bottom: 5px; margin-left: 10px;width:95%;}
+.li_line {border-bottom:#CCC dotted 1px; display: inline-block;margin-left: 10px;padding-bottom: 2px;padding-top: 5px;}
+.li_line_gl {background-color: f0f0f0;border-bottom:#CCC dotted 1px; display: inline-block;margin-left: 10px;padding-bottom: 2px;padding-top: 5px;}
+/*去掉li前面的小黑点*/
+li {list-style-type:none; color:#000000;}
+
+.f-right{float:right}
+.f-left{float:left}
+a {TEXT-DECORATION:none}
+.blood-red , .blood-red a{color:#4f1e24;text-decoration:none;}
+
+/*下面清华就业考过来的*/
+@charset "GBK";
+/*---------- 全局控制 ----------*/
+.gray{color:#555555;font-weight:bold;}
+.crimson{color:#b04b59;	font-weight:bold;}
+.blood-red , .blood-red a{color:#4f1e24;text-decoration:none;}
+.line{background:url("line.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/line.jpg*/ no-repeat;height:1px;width:165px;	margin:10px 0px;}
+.dot{background:url("icon_7.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_7.gif*/ no-repeat;width:5px;height:5px;display:block;}
+
+.icon_001 , .icon_004 ,.icon_005 ,.icon_006 ,.icon_008 ,.icon_011 ,.icon_012,.icon_013,.icon_014,.icon_015,.icon_016,.icon_017
+{
+	display:block;
+	padding-left:19px;
+	color:#51514f;
+	letter-spacing:1px;
+	font-weight:bold;
+	float:left;
+}
+.icon_001{background:url("icon_1.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_1.gif*/ left center no-repeat;}
+.icon_004{background:url("icon_4.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_4.gif*/ left center no-repeat;}
+.icon_005{background:url("icon_5.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_5.gif*/ left center no-repeat;}
+.icon_006{background:url("icon_6.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_6.gif*/ left center no-repeat;}
+.icon_008{background:url("icon_8.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_8.gif*/ left center no-repeat;}
+.icon_011{background:url("icon_11.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_11.gif*/ left center no-repeat;}
+.icon_012{background:url("icon_12.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_12.gif*/ left center no-repeat;}
+.icon_013{background:url("icon_13.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_13.gif*/ left center no-repeat;}
+.icon_014{background:url("icon_14.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_14.gif*/ left center no-repeat;}
+.icon_015{background:url("icon_15.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_15.gif*/ left center no-repeat;}
+.icon_016{background:url("icon_16.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_16.gif*/ left center no-repeat;}
+.icon_017{background:url("icon_17.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_17.gif*/ left center no-repeat;}
+
+.more_001 ,.more_002 {padding-left:15px;float:right;display:block;}
+.more_001{background:url("icon_2.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_2.gif*/ left center no-repeat;}
+.more_002{background:url("icon_9.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_9.gif*/ left center no-repeat;}
+.more_001 a ,.more_002 a{color:#000;text-decoration:none;display:block;}
+INPUT.text {
+	BORDER: #d2d2d2 1px solid; 
+	COLOR: #492260;  
+	FONT-SIZE: 12px; 
+	height:16px;
+	width: 140px;
+	line-height:16px;}
+INPUT.text_line {
+	BORDER-bottom: #b7a1a5 1px solid;
+	BORDER-right: #fcf5ef 1px solid;
+	BORDER-left: #fcf5ef 1px solid;
+	BORDER-top: #fcf5ef 1px solid;
+	COLOR: #492260;  
+	FONT-SIZE: 12px; 
+	height:23px;
+	line-height:23px;
+	background-color:#fcf5ef}
+	
+INPUT.button1 {
+	BORDER: #af919b 1px solid; 
+	COLOR: #313131;  
+	FONT-SIZE: 12px; 
+	height:20px;
+	line-height:20px;
+	width:50px;
+	background-color:#eddee5;
+	}
+INPUT.button_small {
+	BORDER: #af919b 1px solid; 
+	COLOR: #313131;  
+	FONT-SIZE: 12px; 
+	height:20px;
+	line-height:20px;
+	width:19px;
+	background-color:#eddee5;
+	}
+
+#select ul li{ height:30px; text-align:center;}
+#select select{width:130px;}
+
+
+
+
+#wrapper {
+	font-size: 12px;
+	width:1004px;
+	margin:0px auto;
+
+}
+
+/*banner区域开始*/
+#banner #logo{float:left;margin-left:25px;}
+#banner #banner_info{ float:left;}
+#banner #banner_img{float:right;}
+#banner div {height:80px;margin:20px 0px 0px 0px;}
+#banner .date{clear:both; display:block; float:right; color:#656565;height:30px;line-height:30px;width:130px;text-align:right;}
+
+/*banner区域结束*/
+
+/*导航栏区域开始*/
+#nav{clear:both;height:31px;line-height:31px;background:url("nav_bg.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/nav_bg.jpg*/ repeat-x;overflow:hidden;}
+#nav ul{padding:0px 0px 0px 32px;list-style:none;}
+#nav #nav_left_border ,#nav #nav_right_border{display:block;height:31px;width:5px;background-repeat:no-repeat;}
+#nav #nav_left_border{background:url("nav_left_border.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/nav_left_border.jpg*/;float:left;}
+#nav #nav_right_border{background:url("nav_right_border.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/nav_right_border.jpg*/;float:right;}
+#nav ul li{float:left;height:31px;line-height:31px;}
+#nav ul li a{color:#FFF; text-decoration:none; display:block; width:97px; text-align:center;}
+#nav ul li a:hover{color:#62323e;font-weight:bold;background:url("nav_hover_bg.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/nav_hover_bg.jpg*/ no-repeat left bottom;}
+
+/***/
+
+/***/
+
+#nav form{margin:0px;padding:0px;display:inline;float:right;}
+#nav input{vertical-align:middle;border:none;}
+#nav .text{height:23px;width:170px;background:url("search_bg.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/search_bg.gif*/ no-repeat 5px #FFF;line-height:28px;padding-left:19px;font-size:14px;vertical-align:middle;}
+
+/*导航栏区域结束*/
+
+/*中部区域开始*/
+#content{margin-top:15px;text-align:center;}
+#content img{margin-bottom:5px;}
+
+/*当前位置*/
+#dangqian{text-align:left;margin-top:12px;margin-bottom:55px;}
+
+/*页中区域结束*/
+
+/*左部区域开始*/
+#left{width:223px;float:left;}
+
+/*生源速览开始*/
+#sysl{text-align:center;margin:10px;}
+#sysl ul li { height:24px; line-height:24px; padding-left:12px; border-bottom:#ccc 1px dotted; background:url("icon_7.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_7.gif*/ 2px 9px no-repeat; }
+#sysl ul li a{ color:#8E3C69; font-weight:bold;}
+
+/*职业咨询预约开始*/
+#zyzxyy{text-align:center;margin:10px;}
+#zyzxyy ul { padding-left:12px; border-top:#ccc 1px dotted;  background:url("icon_7.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_7.gif*/ 2px 9px no-repeat;}
+#zyzxyy li { height:24px; line-height:24px; }
+#zyzxyy ul .a1{ color:#8E3C69; font-weight:bold;}
+#zyzxyy ul .a2{ color:#8E3C69; font-weight:bold;}
+#zyzxyy ul  .title{ padding-left:50px;}
+
+/*tab 菜单开始*/
+.tab , .module {clear:both;margin-bottom:10px;}
+.tab h3{border-bottom:#cfa7b0 solid 1px;height:27px;line-height:27px;}
+
+
+.tab h3 ul li a{color:#666;	height:27px;line-height:27px;display:block;	text-decoration:none;}
+.tab .content{clear:left;padding:5px 8px;overflow:auto;}
+
+.tab ul{list-style:none;}
+.tab .content ul li{line-height:20px;clear:both;}
+
+.tab .text{border:#d2d2d2 solid 1px;}
+.tab .item{float:left;height:22px; line-height:22px; display:block;}
+.tab .date{font-size:12px;color:#9a9a9a;float:right;display:block;height:20px;}
+
+#middle .tab h3 {padding:0px 10px 0px 20px ;}
+#middle .tab h3 ul li{float:left;text-align:center;display:block;height:27px; padding:0px 3px;width:80px;}
+#middle .tab h3 .focus{float:left;position:relative;top:1px;left:0px; width:113px; background:url("tab_bg001.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/tab_bg001.gif*/ no-repeat; text-align:center;}
+.tab h3 .focus a { color:#FFF; font-weight:bold; display:block;}
+
+
+
+#left .tab h3 ul li{float:left;width:66px;text-align:center;display:block;height:27px;}
+
+#left .tab h3 .focus{background:url("login_bg.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/login_bg.gif*/ no-repeat; width:80px;position:relative;top:1px;left:0px;}
+#left .tab .content{border:solid #cfa7b0;border-width:0px 1px 1px 1px;}
+/*tab 菜单结束*/
+
+/*module 开始*/
+
+.module{border:#e0c8cc solid 1px;}
+.module h3{height:27px;	line-height:27px;padding:0px 8px;border-bottom:#e8dadd solid 1px;background:url("module_title_bg.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/module_title_bg.jpg*/ repeat-x;}
+.module .content{padding:13px 10px;}
+.module .content h4{color:#515151;margin:0px;padding:0px;font-size:12px;margin-bottom:10px;font-weight:bold;}
+.module ul{list-style:none;}
+.module ul li,.module ul li a{color:#656565;line-height:18px;text-decoration:none; }
+.module .content p{color:#656565;margin:0px;padding:0px;}
+.module .content_txt{padding:10px;text-align:left;line-height:180%;font-size:13px;}
+.module h5{height:27px;	line-height:27px;padding:0px 8px;border-bottom:#e8dadd solid 1px;background:url("module_title_bg.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/module_title_bg.jpg*/ repeat-x; font-weight:bold;font-size:14px;}
+
+
+/*module 结束*/
+
+.dot_line{list-style:none;}
+.dot_line li {border-bottom:dotted #CCC 1px;line-height:22px; height:22px;}
+.dot_line li a{color:#505050;text-decoration:none;}
+.dot_line li a:hover{color:#8b3248;}
+
+#middle .dotted_line {background:url("icon_7.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_7.gif*/ no-repeat 0px 5px; border-bottom:#CCC dotted 1px; margin-top:5px;}
+#middle .dotted_line li{padding-left:15px;}
+
+
+
+.middle_tab_bg{ background:url("middle_tab_bg.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/middle_tab_bg.jpg*/ repeat-x bottom;}
+
+#login ul li{ height:24px;}
+#login form{ margin:5px;}
+
+/*计时器 开始*/
+.counter{text-align:center;}
+.counter ul{list-style:none;}
+.counter ul li{height:20px;text-align:center;}
+/*计时器 结束*/
+
+/*左部区域结束*/
+
+
+/*右部区域开始*/
+#right{width:771px;float:right;}
+#right #ad{ margin-bottom:10px;}
+
+#right #zphyy {background:url("zczphyy.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/zczphyy.gif*/ no-repeat;height:37px;width:770px;margin-bottom:10px;text-align:left;}
+#right #zphbm{background:url("zphbm.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/zphbm.gif*/ no-repeat;height:62px;width:770px;margin-bottom:10px;text-align:center;}
+#right #zphyy .txt{display:block;	padding-left:220px;	float:left;padding-top:4px;font-weight:bold;}
+#right #zphbm .txt{display:block;	padding-left:220px;	float:left;padding-top:8px;font-weight:bold;}
+
+#right #zphlc{float:left;width:771px;margin-bottom:10px;display:block;}
+
+
+
+/* 招聘会举办流程区域 */
+#info_tags { margin:0 auto 15px; }
+#info_tags h3 { height:27px; line-height:27px; border-bottom:#cfa7b0 1px solid; }
+#info_tags h3 .title { width:120px; height:27px; float:left; line-height:27px; background:url("tab_bg8.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/tab_bg8.gif*/ no-repeat; color:#fff; font-weight:bold; margin:0 auto; text-align:center; }
+#info_tags h3 .left{ width:25px;height:27px; line-height:27px; }
+#info_tags h3 .menu { float:right; padding-right:5px; }
+#info_tags h3 .menu a { color:#555; font-weight:normal; }
+#info_tags h3 .menu a:hover { color:#945a69; font-weight:bold; text-decoration:none; }
+#info_tags table { width:100%; border:#e3dddf 1px solid; margin:5px auto 0; }
+#info_tags table tbody tr { }
+#info_tags table tr td { height:24px; line-height:24px; vertical-align:middle; }
+#info_tags table tr td img { margin-left:5px; vertical-align:middle; }
+#info_tags table tr td a { color:#555; text-align:left; padding-left:15px; }
+#info_tags table tr td a:hover { color:#a55065; } 
+#info_tags table thead tr { height:30px; line-height:30px; background:#eee; text-align:center; vertical-align:middle; color:#71686b; }
+#info_tags table .event { height:24px; line-height:24px; vertical-align:middle; background:#f6f6f6; }
+#info_tags table  tfoot tr th { height:20px; text-align:right; padding-right:5px; }
+#info_tags table  tfoot tr th span { font-weight:normal; }
+
+/* 四个字的标题行 */
+#info_tags4 { margin:0 auto 15px; }
+#info_tags4 h3 { height:27px; line-height:27px; border-bottom:#cfa7b0 1px solid; }
+#info_tags4 h3 .title { width:87px; height:27px; float:left; line-height:27px; background:url("tab_bg4.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/tab_bg4.gif*/ no-repeat; z-index:3; position:relative; top:1px; color:#fff; font-weight:bold; padding-left:2px; }
+#info_tags4 h3 .left{ width:25px;height:27px; line-height:27px; }
+
+/* 图片新闻 */
+#pic_news { float:left; width:200px; margin:10px auto 0; text-align:center;}
+#pic_news1 { float:right; width:240px; margin:10px auto 0; text-align:center;}
+/* 图片新闻 右侧信息区域 */
+#info_title { width:520px;  float:right; margin-top:25px; line-height:180%;padding-right:10px;}
+#info_title1 { width:500px;  float:left; margin-top:10px; line-height:180%;}
+#info_title1 ul {  margin:5px auto 0; }
+#info_title1 ul li { height:22px; line-height:22px; background:url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+#info_title1 ul li a { color:#555; text-align:left; padding-left:15px; }
+#info_title1 ul li a:hover { color:#a55065; } 
+#info_title1 ul .event { height:22px; line-height:22px; vertical-align:middle; background:#f6f6f6 url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+
+
+/* 左侧信息区域 */
+#info_box { margin:0 0 20px auto; width:370px; float:left; }
+#info_box h3 { height:27px; line-height:27px; border-bottom:#cfa7b0 1px solid; }
+#info_box h3 .title { width:100px; height:27px; float:left; line-height:27px; background:url("tab_bg6.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/tab_bg6.gif*/ no-repeat; color:#fff; font-weight:bold; margin:0 auto; text-align:center; }
+#info_box ul { border:#e3dddf 1px solid; margin:5px auto 0; }
+#info_box ul li { height:22px; line-height:22px; background:url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+#info_box ul li a { color:#555; text-align:left; padding-left:15px; }
+#info_box ul li a:hover { color:#a55065; } 
+#info_box ul .event { height:22px; line-height:22px; vertical-align:middle; background:#f6f6f6 url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+
+
+/* 右侧信息区域 */
+#info_box_r { margin:0 0 20px auto; width:370px; float:right; }
+#info_box_r h3 { height:27px; line-height:27px; border-bottom:#cfa7b0 1px solid; }
+#info_box_r h3 .title { width:100px; height:27px; float:left; line-height:27px; background:url("tab_bg6.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/tab_bg6.gif*/ no-repeat; color:#fff; font-weight:bold; margin:0 auto; text-align:center; }
+#info_box_r ul { border:#e3dddf 1px solid; margin:5px auto 0; }
+#info_box_r ul li { height:22px; line-height:22px; background:url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+#info_box_r ul li a { color:#555; text-align:left; padding-left:15px; }
+#info_box_r ul li a:hover { color:#a55065; } 
+#info_box_r ul .event { height:22px; line-height:22px; vertical-align:middle; background:#f6f6f6 url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+
+
+#middle
+{
+	width:478px;
+	float:left;
+}
+/*右部区域结束*/
+.meeting_info
+{
+	float:left; width:48%; display:block;
+	color:#666666;
+}
+
+
+#right_side
+{
+	width:246px;
+	float:right;
+}
+
+
+/*页尾区域开始*/
+#footer { border-top:#a07580 solid 3px; background:#eee; clear:both; height:74px; line-height:74px; color:#514f50; text-align:center; }
+#footer p { height:72px; line-height:72px; border-top:#c7afb5 2px dotted; margin-top:1px; }
+#footer  p span { color:#000; }
+/*页尾区域结束*/
+
+/* 表格样式 */
+.table_wind_conter {
+  width:95%;
+  border-collapse:collapse;
+  border: 0px;
+  margin:0 auto; 
+  margin-top:4px; margin-bottom:9px;
+  vertical-align: middle;
+}
+.table_wind_conter td {
+  padding: 0px;
+}
+.table_wind_conter .left {
+  width:16px; line-height:24px;background-image:url("h_116.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/images/h_116.gif*/; background-repeat: no-repeat;
+}
+.table_wind_conter .line {  border-bottom:#cbcbcb 1px solid;height:5px;  }
+.table_wind_conter .title { background:#e7e7e7;height:25px; line-height:25px;font-size:12px;font-weight:bold; }
+.table_wind_conter .txt_c { text-align:center }
+.table_wind_conter .event { height:24px; line-height:24px; vertical-align:middle; background:#f6f6f6; }
+.table_wind_conter .pics { width:160px;height:120px;  vertical-align:middle;text-align:center; }
+.table_wind_conter .pic_txt { vertical-align:top; }
+
+/* 宽度较小的表格样式 */
+.table_wind_conter_small {
+  width:80%;
+  border-collapse:collapse;
+  border: 0px;
+  margin:0 auto; 
+  margin-top:4px; margin-bottom:9px;
+  vertical-align: middle;
+}
+.table_wind_conter_small td {
+  padding: 0px;
+}
+.table_wind_conter_small .left {
+  width:16px; line-height:24px;background-image:url("h_116.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/images/h_116.gif*/; background-repeat: no-repeat;
+}
+.table_wind_conter_small .line {  border-bottom:#cbcbcb 1px solid;height:5px;  }
+.table_wind_conter_small .title { background:#e7e7e7;height:25px; line-height:25px;font-size:12px;font-weight:bold; }
+.table_wind_conter_small .txt_c { text-align:center }
+.table_wind_conter_small .event { height:24px; line-height:24px; vertical-align:middle; background:#f6f6f6; }
+.table_wind_conter_small .event1 { height:24px; line-height:24px; vertical-align:middle; background:#ffffff; }
+.table_wind_conter_small .pics { width:160px;height:130px;  vertical-align:middle;text-align:center; }
+.table_wind_conter_small .pic_txt { vertical-align:top; }
+
+
+/* 左侧信息区域 */
+#info_list { margin:0 0 20px auto; width:200px; float:left; }
+#info_list ul { margin:5px auto 0; }
+#info_list ul li { height:22px; line-height:22px; background:url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+#info_list ul li a { color:#555; text-align:left; padding-left:15px; }
+#info_list ul li a:hover { color:#a55065; } 
+#info_list ul .event { height:22px; line-height:22px; vertical-align:middle; background:#f6f6f6 url("icon_10.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/icon_10.gif*/ 5px 6px no-repeat; }
+
+
+#wrapper #content #right .module .content_txt p {
+}
+
+
+
+/* ---- 以下是新加样式! ---- */
+/* ---- 导航区域 ---- */
+#nav2 p { float:left; list-style:none; list-style-image:none; height:20px; margin-top:11px;}
+/* ---- module区域 ---- */
+.module .content_txt .content_title{color:#6a1344; padding:20px;font:bold 16px/28px 微软雅黑, sans-serif;line-height:120%; text-align:center;}
+.module .content_txt h3{height:auto; line-height:180%; padding:10px; border-bottom:0px; background:none; }
+.module .content_txt ul li,.module ul li a{color:#fff; line-height:180%; text-decoration:none; }
+.module .content a{color:#515151;}
+/* ---- form区域 ---- */
+form { display: inline; }
+
+.con1 { width:100%; margin:0 auto; background:#fff; position:relative; z-index:9;}
+.con1 ul { width:auto;}
+.con1 ul li {float:left; background:url("arrow_org_white.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/arrow_org_white.gif*/ 5px 8px no-repeat;}
+.con1 ul li a { display:block; float:left; line-height:30px; margin-left:15px;*margin-left:15px !important; _margin-left:15px; text-decoration:none;}
+.conl ul li a:hover { color:#666; text-decoration:underline;}
+
+/*-------------------- 新导航下拉菜单 --------------------*/
+#nav_B {clear:both; height:31px; background:url("nav_bg.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/nav_bg.gif*/ left top no-repeat; position:relative; z-index:9; }
+#nav_B ul {height:31px;line-height:31px; padding:0px 0px 0px 32px; color:#fff; }
+#nav_B ul a { display: block;text-align:center; height:31px; line-height:31px; color:#fff; }
+#nav_B ul a:link { display: block;  text-align:center; height:31px; line-height:31px; color:#fff; text-decoration:none; font-weight:bold; }
+#nav_B ul a:visited { display: block;  text-align:center; height:31px; line-height:31px;color:#fff; font-weight:bold; text-decoration:none;}
+#nav_B ul a:hover , .temp{ display: block; text-align:center; height:31px; line-height:31px;color:#62323e;font-weight:bold;background:url("nav_hover_bg.jpg")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/nav_hover_bg.jpg*/ no-repeat left bottom; text-decoration:none; }
+
+
+#nav_B ul li { float:left; width:100px; color:#fff;}
+#nav_B ul li ul { line-height:22px; text-align:left; left:-999em; width:970px; float:left; position:absolute; background:#f8f8f8; border:#ccc 1px solid; }
+#nav_B ul li ul li{ float:left; width:auto; text-align:center; white-space:nowrap; }
+#nav_B ul li ul li a{ display:block; float:left; width:auto; padding:0px 5px; text-align:center; color:#fff;}
+#nav_B ul li ul li a:link { text-decoration:none; color:#666; font-weight:bold; }
+#nav_B ul li ul li a:visited { color:#666; text-decoration:none; font-weight:bold; }
+#nav_B ul li ul li a:hover { color:#F3F3F3; text-decoration:none; font-weight:normal; background:#aa5367; font-weight:bold; }
+
+#nav_B ul li:hover ul { left:0px;}
+#nav_B ul li.sfhover ul { left:0px; }
+
+
+/***/
+#nab_B span { float:right; margin-top:-28px; padding-right:5px; width:160px; display:block; }
+#nav_B form{margin:0px;padding:0px;display:inline;float:right;}
+#nav_B input{vertical-align:middle;border:none;}
+#nav_B .text{height:23px;background:url("search_bg.gif")/*tpa=http://career.buaa.edu.cn/website/res_base/career/default/img/tsinghua/search_bg.gif*/ no-repeat 5px #FFF;line-height:28px;padding-left:19px;font-size:14px;}

@@ -1,0 +1,458 @@
+BODY{
+	/*cursor:url('../image/test.ani');*/
+    FONT-FAMILY: "Arial,宋体";
+	font-size:12px;
+	margin-left:5px;
+	margin-top:5px;
+	margin-right:5px;
+	margin-bottom:5px;
+	background-color:#ffffff;
+	border: none;
+}
+
+.article_title { font:bold 17px 黑体,Tahoma,Arial;text-align:center;font-weight:bold;color:#284224}
+
+.article_subtitle {FONT-SIZE: 14px; FONT-FAMILY: ""; TEXT-DECORATION: none;color:#3E6437}
+
+.article_subhead {font-size:12px;font-weight:bold;color:#000066}
+
+.article_subhead1{font-size:12px;color:#000099; text-align:center}
+
+.article_timeStyle1{FONT-STYLE: italic;color:#D2D2FF;}
+
+.article_timeStyle2{FONT-SIZE: 11px;color:#aaaaaa; FONT-FAMILY: "MS Shell Dig,Tahoma";}
+
+.article_timeStyle3{color:#ffffff;}
+
+.article_username {font: bold;color:#6666FF}
+
+.article_else{font-size:12px;}
+
+.article_content{font-size:12px;color:#0000CC}
+
+.article_keywords {	COLOR:#FF00FF}
+
+.article_master{color:#0000ff;font-weight: bold;}
+
+.article_help {FONT-SIZE: 12px; COLOR: #4E7CE9; LINE-HEIGHT: normal; FONT-STYLE: normal;}
+
+.article_note {FONT-SIZE: 12px;COLOR: #777777;}
+
+.article_subnote{FONT-SIZE: 11px;color:#8BD04D;font-style:italic;}
+
+.article_error{color:#FF0000;FONT-FAMILY: "宋体";}
+
+.article_copyright{font-size:11px;FONT-FAMILY: "MS Shell Dig,Tahoma"}
+
+td {font-size:12px;color:#003366;}
+
+.css_scroll{
+	scrollbar-3d-light-color:#FFFFFF;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-face-color:#EEEEEE; 
+	scrollbar-arrow-color:#BBBBBB; 
+	scrollbar-shadow-color:#FFFFFF; 
+	scrollbar-dark-shadow-color:#EEEEEE; 
+	scrollbar-base-color:#EEEEEE; 
+}
+
+.tab_title {
+     height:25px;
+	 background-image:url(../image/skin/tiao.gif)
+	}
+.tab_title_bottom{
+     height:25px;
+	 background-image:url(../image/skin/title_bottom.gif)
+	 }
+.tab_listing_head{
+     height:25px;
+     border:0px;
+	 background-image:url(../image/skin/tiao.gif)
+     }
+.tab_listing_bottom{
+     height:25px;
+     border:0px;
+	 background-image:url(../image/skin/title_bottom.gif);
+	 }
+.tab_img{
+     /* background-image:url(../image/skin/page_bg.gif) */
+}
+.tab_bg{
+     background-color:#53A2E3;
+}
+.tab_0{
+     background-color:#8CC1F5;
+}
+.tab_1{
+     background-color:#ACD5FF;	 
+}
+.tab_2{
+	 background-color:#CBE7FF;
+}
+.tab_3{
+	 background-color:#EAF6FF;
+}
+.tab_5{
+     background-color:#ffffff;
+	 word-break : break-all;
+}
+.tab_dashed_line {
+	border-bottom: #CCCCCC 1px dashed
+}
+
+/*--for new page--*/
+.font_green{color:#009900;text-decoration:none}
+.font_blue{color:#0000FF;text-decoration:none}
+.font_white{color:#FFFFFF;text-decoration:none}
+.font_menu{color:#999999;text-decoration:none}
+
+
+/*--for div 虚线0 / 实线1--*/
+.div_border0{
+	border: 1px dashed #b9cbf7;
+	height:100%;
+}
+.div_border1{
+	border: 1px solid #b9cbf7;
+	height:100%;
+}
+
+input{
+	font-family:"Arial,宋体"; 
+	font-size: 12px; 
+    border-top-width: 1px; 
+	border-right-width: 2px; 
+	border-bottom-width: 2px; 
+	border-left-width: 1px; 
+	/*width:expression( (this.type=="text" || this.type=="password")?"80%":"auto" );*/
+   }
+
+Textarea
+   {font-family:"Arial,宋体"; 
+	font-size: 12px; 
+    border-top-width: 1px; 
+	border-right-width: 2px; 
+	border-bottom-width: 2px; 
+	border-left-width: 1px; 
+	overflow:auto;
+   }
+
+select {
+   font-family:"Arial,宋体"; 
+   font-size: 12px; 
+   color: #000000; 
+   background:#ffffff;
+   line-height: 15px;
+   border-top-width: 1px; 
+   border-right-width: 1px; 
+   border-bottom-width: 1px; 
+   border-left-width: 1px;    
+   }
+
+/*--------*/
+form input.focus,form textarea.focus{
+	border-color:orange;
+	color:red;
+}
+/*-------*/
+
+.button{ 
+   font-size: 12px; 
+   color: #000000; 
+   background:#dddddd;
+   line-height: 15px;
+   border-top-width: 1px; 
+   border-right-width: 1px; 
+   border-bottom-width: 1px; 
+   border-left-width: 1px; 
+   }
+
+.button2
+   {
+   font-size: 12px; 
+   color: #000000; 
+   border-style:double;
+   line-height: 15px;
+   border-top-width: 1px; 
+   border-right-width: 1px; 
+   border-bottom-width: 1px; 
+   border-left-width: 1px; 
+   }
+
+.button3{
+	border:0px;
+	background:inherit;
+}
+
+/* Add 2004-05-26   */  
+.inputtext{
+	background-image: url(../image/inputbg.gif); 
+	border-top-width:1px;
+	border-left-width:1px;
+	border-color:#000000;
+}
+.inputbutton{
+	background-image: url(../image/list_bg.gif);
+	border-top-width:1px;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-right-width:1px;
+	border-color:#000000;
+	height:20px;
+	padding:0px;
+	width:expression( ((/^[a-z0-9.]*$/gi).test(this.value))?this.value.length*10:this.value.length*12+10  );
+}
+.inputbutton1{
+	background-image: url(../image/list_bg.gif);
+	border-top-width:1px;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-right-width:1px;
+	border-color:#000000;
+	height:20px;
+	padding:0px;
+	width:expression( this.value.length*8+10  );
+}
+
+/* 必填项*号class */
+.article_require{color:#FF0000;}
+
+/* 一般输入框 */
+.input_textNormal{
+	/*width:200px;  在 input.width 加了统一控制长度*/
+}
+/* 其他用到输入框 */
+.input_textNormal1{
+	/*185*/
+	width:117px; 
+}
+/* 用到较长输入框*/
+.input_textLong{
+	width:100%;
+}
+/* 只读输入框 #dedede */
+.input_textReadonly{
+	background:#eeeeee;
+	/*width:200px;*/
+}
+/* 其他用到只读输入框 */
+.input_textReadonly1{
+	background:#eeeeee;
+	/* width:185px;*/
+}
+/* 日期输入框 */
+.input_textDate{
+   word-spacing:0px; 
+   border-spacing:0px; 
+   margin:0px;
+   background-image:url(../image/input_date.gif);
+   /*width:185px;*/
+   width:117px;
+}
+/* 年月输入框 */
+.input_textMonth{
+   font-size: 12px;
+   word-spacing:0px; 
+   border-spacing:0px; 
+   margin:0px;
+   line-height:15px;
+   background-image:url(../image/input_month.gif);
+   /*width:200px;*/
+}
+/* 时间输入框 */
+.input_textHour{
+   font-size: 12px;
+   word-spacing:0px; 
+   border-spacing:0px; 
+   margin:0px;
+   line-height:15px;
+   background-image:url(../image/input_Hour.gif);
+   /*width:200px;*/
+}
+/* 输入框类似线条效果 */
+.input_textLine{
+	border-bottom:black solid 1px;
+	border-left:none;
+	border-top:none;
+	border-right:none;
+}
+
+
+/* 日期按钮 */
+.input_buttonDate{
+   cursor:hand;
+   border:0px;
+   width:15px;
+   line-height:17px;
+   background-image:url(../image/combo_date.gif);
+}
+/* 无级连按钮 普通可输入可选择控件 */
+.input_selectBtnNoLink{
+   cursor:hand;
+   border:0px;
+   width:15px;
+   line-height:17px;
+   background-image:url(../image/combo_arrow.gif);
+}
+/* 互级连按钮 */
+.input_selectBtnInterLink{
+   cursor:hand;
+   border:0px;
+   width:15px;
+   line-height:17px;
+   background-image:url(../image/combo_interlink.gif);
+}
+/* 强级连按钮 */
+.input_selectBtnMustLink{
+   cursor:hand;
+   border:0px;
+   width:15px;
+   line-height:17px;
+   background-image:url(../image/combo_mustlink.gif);
+}
+/* 弱级连按钮 */
+.input_selectBtnWeakLink{
+   cursor:hand;
+   border:0px;
+   width:15px;
+   line-height:17px;
+   background-image:url(../image/combo_weaklink.gif);
+}
+
+
+/* 选择栏目 */
+.input_selectBtnColumn{
+   cursor:hand;
+   border:0px;
+   width:20px;
+   background:normal;
+   background-image:url(../image/button_column.gif);
+}
+/* 选择部门图片 */
+.input_selectBtnDepart{
+   cursor:hand;
+   border:0px;
+   width:20px;
+   line-height:17px;
+   background:normal;
+   background-image:url(../image/search_file.gif);
+}
+/* 选择岗位图片 */
+.input_selectBtnPost{
+   cursor:hand;
+   border:0px;
+   width:20px;
+   line-height:17px;
+   background:normal;
+   background-image:url(../image/button_post.gif);
+}
+/* 选择人员图片 */
+.input_selectBtnPerson{
+   cursor:hand;
+   border:0px;
+   width:20px;
+   line-height:17px;
+   background:normal;
+   background-image:url(../image/search.gif);
+}
+/* 选择编辑窗口 */
+.input_selectBtnEdit{
+   cursor:hand;
+   border:0px;
+   width:20px;
+   line-height:17px;
+   background:normal;
+   background-image:url(../image/button_update.gif);
+}
+/* 导出excel */
+.input_selectBtnExcel{
+   cursor:hand;
+   border:0px;
+   width:62px; 
+   line-height:17px;
+   background-image:url(../image/button_excel.gif);
+}
+
+input.fileobject 
+   {font-family:"Arial,宋体"; 
+	font-size: 12px; 
+	color: #000000;
+    border:1px solid black; 
+	border-top-width: 1px; 
+	border-right-width: 1px; 
+	border-bottom-width: 1px; 
+	border-left-width: 1px; 
+	}
+
+a{color:#000099;text-decoration:none}
+a:hover {color:#225CE3;text-decoration:none}
+a:active{color:#225CE3;text-decoration:none}
+/*a:visited{color:#000099;text-decoration:none}*/
+
+.link2 {color:#64A057;text-decoration:underline}
+.link2:hover {color:#64A057;text-decoration:none}
+.link2:visited {color:#000000;text-decoration:none}
+.link2:active {color:#000000;text-decoration:none}
+
+.link3 {color:#ff0000;text-decoration:underline}
+.link3:hover {color:#000000;text-decoration:none}
+.link3:visited {color:#000000;text-decoration:none}
+.link3:active {color:#000000;text-decoration:none}
+
+.link4 {color:#000000;text-decoration:none}
+.link4:hover {color:#333333;text-decoration:none}
+.link4:visited {color:#333333;text-decoration:none}
+.link4:active {color:#666666;text-decoration:none}
+
+/* ---------------------------------------------------- */
+/* coolGrid                                             */
+/* ---------------------------------------------------- */
+.coolGrid THEAD TD
+{
+	border-left: 1px solid buttonhighlight;
+	border-top: 1px solid buttonhighlight;
+	border-bottom: 1px solid buttonshadow;
+	border-right: 1px solid buttonshadow;
+	font: menu;
+	/*color: menutext;*/
+	/*background-color: buttonface;*/
+    cursor: hand;
+    padding-top: 0px;
+    padding-bottom: 1px;
+}
+
+/*--- alt pop style ----*/
+.cPopText{  
+	background-color: #FFFFFF; 
+	border: 1px #000000 solid; 
+	font-size: 12px; 
+	padding-right: 4px; 
+	padding-left: 4px; 
+	height: 20px; 
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	filter: Alpha(Opacity=0);
+}
+/*--- dug add on 2006-03-06 ----*/
+.inputDateButton{
+   border:0px;
+   width:15px;
+   line-height:17px;
+   background-image:url(../image/combo_date.gif);
+}
+
+.def {
+	font-size:100%
+	border-collapse:collapse;
+	border:solid #8CC1F5;
+	border-width:1px 0 0 1px;
+	border-collapse:collapse;
+}
+
+.def th, .def td {
+	font-size:80%;
+	border:solid #8CC1F5;
+	border-width:0 1px 1px 0;
+	padding:2px;
+}
+

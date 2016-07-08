@@ -1,0 +1,68 @@
+package crds.lyb.dao.impl;
+
+import java.util.*;
+
+import crds.lyb.dao.IDAOlyb;
+import crds.lyb.web.form.Formlyb;
+
+import crds.pub.util.JdbcTemplateExtend;
+
+public  class DAOlyb implements IDAOlyb {
+	// 重写的JdbcTemplateExtend
+	private JdbcTemplateExtend jdbcTemplate;
+	public void setJdbcTemplate(JdbcTemplateExtend jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}	
+
+	public int Add(Formlyb form) throws Exception
+	{	
+		
+		String id = form.getMessage_id();
+		String t  = form.getMessage_t();
+		String m  = form.getMessage();
+		String sql = "insert into lyb (message_id,message_t,message) values ('"+id+"','"+t+"','"+m+"')";
+		
+  	    int list=jdbcTemplate.insertToDB(sql);		
+	    return list;
+	}
+	@SuppressWarnings("unchecked")
+	public List Bro(Formlyb form) throws Exception
+	{
+		StringBuffer  countsql = new StringBuffer();
+		countsql=new StringBuffer("select count(*) from lyb");
+		String sql="select * from lyb";	
+		form.setRowsCount(jdbcTemplate.queryForInt(countsql.toString()));
+		return jdbcTemplate.queryForListPage(sql.toString(),form.getStartPosition(),form.getRowsPerPage());	
+		
+		
+	}
+	
+
+	public int Update(Formlyb form) throws Exception
+	{
+		
+		String id = form.getMessage_id();
+		String t = form.getMessage_t();
+		String m = form.getMessage();
+		String sql="update lyb set message_t='"+t+"',message='"+m+"' where message_id='"+id+"'";
+		int list =jdbcTemplate.insertToDB(sql);
+		return list;	
+	}
+	@SuppressWarnings("unchecked")
+	public List Jump(Formlyb form) throws Exception
+	{
+		String id = form.getMessage_id();
+		String sql="select * from lyb where message_id='"+id+"'";	
+		List list = jdbcTemplate.queryForList(sql);
+		return list;
+	}
+	public int Del(Formlyb form) throws Exception
+	{
+		String id = form.getMessage_id();
+		String sql="delete from lyb where message_id='"+id+"'";
+		int list=jdbcTemplate.update(sql);
+		return list;
+		
+	}
+
+}

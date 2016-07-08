@@ -1,0 +1,236 @@
+.p9
+{
+    FONT-SIZE: 9pt
+}
+.grayshadow
+{
+    FILTER: DropShadow(Color=gray,offX=1,offY=1,Positive=true)
+}
+A:active {
+	FONT-SIZE: 12px; COLOR: darkblue
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: darkblue; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #669900; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: darkblue; TEXT-DECORATION: none
+}
+A.mainA
+{
+	color: black;
+	text-decoration: none;
+
+}
+A.mainA:visited
+{
+	color: black;
+}
+A.mainA:hover
+{
+	color: darkgreen;
+}
+A.nav
+{
+	color: black;
+	text-decoration: none;
+
+}
+A.nav:visited
+{
+	color: black;
+}
+A.nav:hover
+{
+	color: darkgreen;
+}
+A.left
+{
+	color: white;
+}
+A.left:visited
+{
+	color: white;
+}
+A.left:hover
+{
+	color: yellow;
+}
+.singleboarder
+{
+    BORDER-BOTTOM: #4a3163 1px solid;
+    BORDER-LEFT: #4a3163 1px solid;
+    BORDER-RIGHT: #4a3163 1px solid;
+    BORDER-TOP: #4a3163 1px solid;
+    FONT-SIZE: 9pt
+}
+
+BODY {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+	FONT-SIZE: 9pt; FONT-FAMILY:   
+	SCROLLBAR-FACE-COLOR: #386CA0;
+	SCROLLBAR-HIGHLIGHT-COLOR: white;
+	SCROLLBAR-SHADOW-COLOR: #336699;
+	SCROLLBAR-ARROW-COLOR: black;
+	SCROLLBAR-BASE-COLOR:#386CA0;
+	scrollbar-3d-light-color: White;
+	scrollbar-dark-shadow-color: #336699
+}
+th {
+	font-size: 9pt;
+	font-family:   ;
+}
+TD {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 9pt; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+P {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+INPUT {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+FONT {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+SELECT {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+OPTION {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+TEXTAREA {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+FORM {
+	TABLE-LAYOUT: fixed; FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY:   
+}
+SELECT {
+	COLOR: #000000; BACKGROUND-COLOR: #ffffff
+}
+.button1 {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: #eeeeee; BACKGROUND: url(/images/button_bak.gif); BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #5a6ca2; BORDER-TOP-COLOR: #eeeeee; FONT-FAMILY: Arial; HEIGHT: 22px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #5a6ca2
+}
+INPUT.radio {
+	BACKGROUND: paleturquoise; COLOR: #000000
+}
+.singlebtn {  background: #cccccc; border-bottom: #665b8e 1px solid; border-left: #ffffff 1px solid; border-right: #665b8e 1px solid; border-top: #ffffff 1px solid; color: #333333; cursor: hand; font-family: "MS Shell Dlg", "Tahoma", "  "; font-size: 12px; height: 20px; padding: 1px}
+.glow
+{
+    FILTER: glow(color=#ffff00,strength=3)
+}
+.tableframe_gray{
+    border-right-width: 1px;
+	border-left-width: 1px;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-right-color: #cccccc;
+	border-left-color: #cccccc;
+	border-bottom-color: #cccccc;
+	border-top-color: #cccccc;
+}
+TABLE {
+	BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 1px
+}
+TD {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px
+}
+.table_banner
+{
+width:98%;
+border: 1px #2B7CBF solid; 
+}
+.table_nav
+{
+	background-image:url("images/nav_tile.gif");
+	background-repeat : repeat-x;
+}
+TABLE.quote {
+	border: thin dashed;
+}
+table.watermark {
+	border-collapse:collapse;
+	border: 1px #d3d3d3 solid; 
+}
+
+#calendar_year
+{
+    DISPLAY: none;
+    Z-INDEX: 10;
+    BACKGROUND: #ffffff;
+    LINE-HEIGHT: 130%;
+    POSITION: absolute
+}
+#calendar_year .col
+{
+    BORDER-RIGHT: #d6e0ef 1px solid;
+    PADDING-RIGHT: 4px;
+    BORDER-TOP: #d6e0ef 1px solid;
+    PADDING-LEFT: 4px;
+    BACKGROUND: #ffffff;
+    FLOAT: left;
+    PADDING-BOTTOM: 4px;
+    MARGIN-LEFT: 1px;
+    BORDER-LEFT: #d6e0ef 1px solid;
+    PADDING-TOP: 4px;
+    BORDER-BOTTOM: #d6e0ef 1px solid
+}
+#calendar_month
+{
+    BORDER-RIGHT: #d6e0ef 1px solid;
+    PADDING-RIGHT: 4px;
+    BORDER-TOP: #d6e0ef 1px solid;
+    DISPLAY: none;
+    PADDING-LEFT: 4px;
+    Z-INDEX: 11;
+    BACKGROUND: #ffffff;
+    PADDING-BOTTOM: 4px;
+    BORDER-LEFT: #d6e0ef 1px solid;
+    LINE-HEIGHT: 130%;
+    PADDING-TOP: 4px;
+    BORDER-BOTTOM: #d6e0ef 1px solid;
+    POSITION: absolute
+}
+
+.popmenu_border
+{
+    BORDER-RIGHT: #7ac4ea 1px solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #7ac4ea 1px solid;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #7ac4ea 1px solid;
+    WIDTH: 100%;
+    PADDING-TOP: 1px;
+    BORDER-BOTTOM: #7ac4ea 1px solid
+}
+
+.tr_title
+{
+    FONT: 11px Arial, Tahoma;
+    COLOR: #92a05a;
+    BACKGROUND-COLOR: #fbffe1
+}
+.tr_title TD
+{
+    BORDER-BOTTOM: #dbddd3 1px solid
+}
+
+.calendar_cell_table_bg
+{
+    BACKGROUND: #f5e0ff;
+    FONT: 12px Tahoma, Verdana
+}
+.calendar_cell_bg
+{
+    BACKGROUND: #f5fbff;
+    FONT: 12px Tahoma, Verdana
+}
